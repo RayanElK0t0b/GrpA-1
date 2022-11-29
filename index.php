@@ -34,7 +34,7 @@
                 <p class="center-align no-space">You can login :
                   <a href="index-login.php" class="center btn">Login</a>
                   <br>Create an account : 
-                  <a class="center btn login-signup">Sign Up</a>
+                  <a href="index-signup.php" class="center btn">Sign Up</a>
                 </p>
               </div>
             </div>
