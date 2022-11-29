@@ -15,9 +15,9 @@
 </head>
 
 <body>
-  
+
   <!--Navigation Bar-->
-  
+
   <nav id=navbar class="grey darken-4">
     <div class="nav-wrapper">
       <a href="index.php">
@@ -35,9 +35,9 @@
       </ul>
     </div>
   </nav>
-  
+
   <!--The Client-->
-  
+
   <div class="client secondary">
     <div class="row hide-on-large-only no-space">
       <div class="col m12 s12">
@@ -123,7 +123,7 @@
   </div>
 
    <!--Contact Form & Footer-->
-  
+
   <footer id=contact class="page-footer primary">
     <div class="container">
       <div class="row">
@@ -177,7 +177,7 @@
                     <a class="waves-effect waves-light btn center-block">Submit</a>
                   </div>
                 </form>
-                
+
               </div>
             </div>
             <div class="modal-footer">
