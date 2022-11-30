@@ -107,7 +107,7 @@ INSERT INTO `paragraphes` (`id_paragraphe`, `id_projet`, `paragraphe`) VALUES
 DROP TABLE IF EXISTS `projets`;
 CREATE TABLE IF NOT EXISTS `projets` (
   `id_projet` int(11) NOT NULL,
-  `name` int(11) NOT NULL
+  `name` varchar(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -170,12 +170,12 @@ INSERT INTO `textes` (`id-text`, `id-projet`, `text`) VALUES
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
-  `username` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
-  `password` int(11) NOT NULL,
-  `first_name` int(11) NOT NULL,
-  `last_name` int(11) NOT NULL,
-  `admin` tinyint(1) NOT NULL DEFAULT '0'
+  `username` varchar(20) NOT NULL,
+  `email` varchar(60) NOT NULL,
+  `password` varchar(60) NOT NULL,
+  `first_name` text NOT NULL,
+  `last_name` text NOT NULL,
+  `admin` boolean NOT NULL DEFAULT False
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 COMMIT;
 
@@ -183,11 +183,11 @@ COMMIT;
 -- Déchargement des données de la table `textes`
 --
 
-INSERT INTO `textes` (`username`, `email`, `password`,`first_name`, `last_name`, `admin`) VALUES
-('Rayouyou', 'relkotob@gaming.tech', 'motdepasse123','Rayan', 'Kotob', '1')
-('Perlainpin', 'greboul@gaming.tech', 'motdepasse123','Gwen', 'Reboul', '1')
-('AhOui', 'email1@gaming.tech', 'motdepasse1234','Joris', 'Boris', '0')
-('Daccor', 'email2@gaming.tech', 'motdepasse1235','Doron', 'Boron', '0')
+INSERT INTO `user` (`username`, `email`, `password`,`first_name`, `last_name`, `admin`) VALUES
+('Rayouyou', 'relkotob@gaming.tech', 'motdepasse123','Rayan', 'Kotob', '1'),
+('Perlainpin', 'greboul@gaming.tech', 'motdepasse123','Gwen', 'Reboul', '1'),
+('AhOui', 'email1@gaming.tech', 'motdepasse1234','Joris', 'Boris', '0'),
+('Daccor', 'email2@gaming.tech', 'motdepasse1235','Doron', 'Boron', '0');
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
