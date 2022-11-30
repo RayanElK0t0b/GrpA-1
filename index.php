@@ -189,7 +189,7 @@
       <div class="footer-copyright">
         <div class="container">
           © 2022 Copyright Text
-          <a class="right hide-on-small-only" href="adminpanel.php">All Rights Reserved</a>
+          <p class="right hide-on-small-only">All Rights Reserved</p>
         </div>
       </div>
     </footer>
