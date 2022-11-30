@@ -45,16 +45,9 @@
           <h2 class="title">User Gestion</h2>
         </div>
         <div>
-        <?php
-          $sql = "SELECT * FROM user"; 
-          $pre = $pdo->prepare($sql); 
-          $pre->execute();
-          $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   
-          foreach($data as $user){ 
-        ?>
+        aaaaaaaaaaaaaa
           <div class="bloc_user">
-            <h2><?php echo $user['email']?></h2>
+            <h2>aaaaaaaaaa</h2>
           </div>
         </div>
       </div>
@@ -63,9 +56,7 @@
           <h2 class="title">Project Gestion</h2>
         </div>
         <div>
-          <?php
-            echo $pjt['name'];
-          ?>
+          aaaaaaaaaaaaaa
         </div>
       </div>
 
