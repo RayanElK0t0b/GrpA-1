@@ -1,6 +1,6 @@
 <?php 
-  require "config.php" 
-  require "security/admin.php" 
+  require "config.php";
+  //require "security/admin.php";
 ?>
 
 <!DOCTYPE html>
@@ -45,9 +45,17 @@
           <h2 class="title">User Gestion</h2>
         </div>
         <div>
-          <?php
-            echo $_SESSION['user']['email'];
-          ?>
+        <?php
+          $sql = "SELECT * FROM user"; 
+          $pre = $pdo->prepare($sql); 
+          $pre->execute();
+          $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+   
+          foreach($data as $user){ 
+        ?>
+          <div class="bloc_user">
+            <h2><?php echo $user['email']?></h2>
+          </div>
         </div>
       </div>
       <div class="row">
