@@ -50,11 +50,12 @@
               $pre->execute();
               $data = $pre->fetchAll(PDO::FETCH_ASSOC);
     
-              foreach($data as $user) ?>
+              foreach($data as $user){ ?>
             <div class="bloc_user">
-              <h2><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username'] ?></h2>
+              <p><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username'] ?></p>
               <span class="email"><?php echo $user['email'] ?></span>
             </div>
+            <?php } ?>
           </div>   
         </div>
       </div>
