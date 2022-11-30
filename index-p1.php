@@ -64,7 +64,7 @@
   <div class="role col l12 row primary no-space">
     <div class="text col s12 m12 l12 center no-space">
       <h2 class="col s12 m12 l12 center">RKGR Role</h2>
-      <h4 class="col s12 m12 l12">Part of realisation and sound engeneering</h4>
+      <h3 class="col s12 m12 l12">Part of realisation and sound engeneering</h3>
       <p class="col s12 m12 l12">From October 2009 to August 2014 RKGR was working with the realisation and
         soundengeneering of
         Canal+
