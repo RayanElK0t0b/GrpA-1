@@ -21,7 +21,7 @@
     <div class="row connect-boxes">
         <div class="col l8 s10 m10 offset-l2 offset-m1 offset-s1 secondary">
             <h1 class="center-align secondary">Sign Up</h1>
-            <form class="secondary" method="post" action="signup.php">
+            <form class="secondary" method="post" action="action/signup.php">
                 <div class="row">
                     <div class="input-field col l10 m10 s10 offset-l1 offset-m1 offset-s1">
                         <i class="material-icons prefix">person</i>
