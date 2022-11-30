@@ -25,7 +25,7 @@
   <div class="client secondary">
     <div class="row hide-on-large-only no-space">
       <div class="col m12 s12">
-        <img src="img/canalcarousel.jpg" class="responsive-img" alt="Canal+ Banner">
+        <img src="img/canalbanner.jpg" class="responsive-img" alt="Canal+ Banner">
       </div>
     </div>
     <div class="no-space row">
