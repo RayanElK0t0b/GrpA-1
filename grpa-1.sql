@@ -114,10 +114,10 @@ CREATE TABLE IF NOT EXISTS `projets` (
 -- Déchargement des données de la table `textes`
 --
 
-INSERT INTO `projets` (`id-projet`, `name`) VALUES
-(1,'Canal')
-(2,'Marvel')
-(3,'MrBeast')
+INSERT INTO `projets` (`id_projet`, `name`) VALUES
+(1,'Canal'),
+(2,'Marvel'),
+(3,'MrBeast');
 -- --------------------------------------------------------
 
 --
