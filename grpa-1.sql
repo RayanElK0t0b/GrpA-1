@@ -110,6 +110,14 @@ CREATE TABLE IF NOT EXISTS `projets` (
   `name` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `textes`
+--
+
+INSERT INTO `projets` (`id-projet`, `name`) VALUES
+(1,'Canal')
+(2,'Marvel')
+(3,'MrBeast')
 -- --------------------------------------------------------
 
 --
@@ -170,6 +178,17 @@ CREATE TABLE IF NOT EXISTS `user` (
   `admin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 COMMIT;
+
+--
+-- Déchargement des données de la table `textes`
+--
+
+INSERT INTO `textes` (`username`, `email`, `password`,`first_name`, `last_name`, `admin`) VALUES
+('Rayouyou', 'relkotob@gaming.tech', 'motdepasse123','Rayan', 'Kotob', '1')
+('Perlainpin', 'greboul@gaming.tech', 'motdepasse123','Gwen', 'Reboul', '1')
+('AhOui', 'email1@gaming.tech', 'motdepasse1234','Joris', 'Boris', '0')
+('Daccor', 'email2@gaming.tech', 'motdepasse1235','Doron', 'Boron', '0')
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
