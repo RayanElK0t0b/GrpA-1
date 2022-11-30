@@ -56,7 +56,7 @@
         </div>
         <div>
           <?php
-            echo $pjt['nom'];
+            echo $pjt['name'];
           ?>
         </div>
       </div>
