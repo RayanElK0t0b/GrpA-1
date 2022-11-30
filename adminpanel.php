@@ -43,20 +43,17 @@
       <div class="row">
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
           <h2 class="title">User Gestion</h2>
-        </div>
-        <div>
-        aaaaaaaaaaaaaa
-          <div class="bloc_user">
-            <h2>aaaaaaaaaa</h2>
-          </div>
+          <div>
+            aaaaaaaaaaaaaa
+          </div>   
         </div>
       </div>
       <div class="row">
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
           <h2 class="title">Project Gestion</h2>
-        </div>
-        <div>
+          <div>
           aaaaaaaaaaaaaa
+        </div>
         </div>
       </div>
 
