@@ -63,7 +63,19 @@
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
           <h2 class="title">Project Gestion</h2>
           <div>
-          aaaaaaaaaaaaaa
+            <?php
+              $sql = "SELECT * FROM projets"; 
+              $pre = $pdo->prepare($sql); 
+              $pre->execute();
+              $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    
+              foreach($data as $user){ ?>
+            <div class="bloc_projets">
+              <p><?php echo $user['name']?></p>
+              <span class="email"><?php echo $user['email'] ?></span>
+            </div>
+            <?php } ?>
+          </div> 
         </div>
         </div>
       </div>
