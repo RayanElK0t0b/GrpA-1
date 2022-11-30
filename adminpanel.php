@@ -1,4 +1,4 @@
-<?php require "admin.php" ?>
+<?php require "security/admin.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +54,7 @@
       <div class="parallax"><img src="img/videoeditor.webp" alt="Video Editor Picture"></div>
     </div>
 
-    <h1 class="title center secondary no-space">R.KOTOB & G.REBOUL EDITING</h1>
+    <h1 class="title center secondary no-space">R.KOTOB & G.REBOUL EDITING Admin Panel</h1>
 
     <!--About us section-->
 
