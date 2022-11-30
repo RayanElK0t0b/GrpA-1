@@ -16,25 +16,9 @@
 
 <body>
 
-  <!--Navigation Bar-->
-
-  <nav id=navbar class="grey darken-4">
-    <div class="nav-wrapper">
-      <a href="index.php">
-        <img src="img/logo_small.png" alt="Logo RKGR">
-      </a>
-      <ul class="right">
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i
-              class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a href="#contact" class="hide-on-small-only">Contact</a></li>
-      </ul>
-      <ul id="dropdown1" class="dropdown-content">
-        <li><a href="index-p1.php">Canal+</a></li>
-        <li><a href="index-p2.php">Marvel</a></li>
-        <li><a href="index-p3.php">Mr.Beast</a></li>
-      </ul>
-    </div>
-  </nav>
+<?php 
+ include("navbar.php");
+?>
 
   <!--The Client-->
 
@@ -80,7 +64,7 @@
   <div class="role col l12 row primary no-space">
     <div class="text col s12 m12 l12 center no-space">
       <h2 class="col s12 m12 l12 center">RKGR Role</h2>
-      <h4 class="col s12 m12 l12">Part of realisation and soundengeneering</h4>
+      <h4 class="col s12 m12 l12">Part of realisation and sound engeneering</h4>
       <p class="col s12 m12 l12">From October 2009 to August 2014 RKGR was working with the realisation and
         soundengeneering of
         Canal+

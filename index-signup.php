@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="input-field col l10 m10 s10 offset-l1 offset-m1 offset-s1">
                         <i class="material-icons prefix">person</i>
-                        <input id="username" type="username" name="username" class="validate" placeholder="Username">
+                        <input id="username" type="text" name="username" class="validate" placeholder="Username">
                     </div>
                 </div>
                 <div class="row">

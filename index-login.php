@@ -21,17 +21,17 @@
     <div class="row connect-boxes">
       <div class="col l8 s10 m10 offset-l2 offset-m1 offset-s1 secondary">
         <h1 class="center-align secondary">Login</h1>
-        <form class="secondary">
+        <form class="secondary" method="post" action="login.php">
           <div class="row">
             <div class="input-field col l10 m10 s10 offset-l1 offset-m1 offset-s1">
               <i class="material-icons prefix">email</i>
-              <input id="email" type="email" class="validate" placeholder="Email">
+              <input id="email" type="email" name="email" class="validate" placeholder="Email">
             </div>
           </div>
           <div class="row">
             <div class="input-field col l10 m10 s10 offset-l1 offset-m1 offset-s1">
               <i class="material-icons prefix">lock</i>
-              <input id="password" type="password" class="validate" placeholder="password">
+              <input id="password" type="password" name="password" class="validate" placeholder="Password">
             </div>
           </div>
           <button class="btn btn-1 waves-effect waves-light" type="submit" name="action">login</button>
