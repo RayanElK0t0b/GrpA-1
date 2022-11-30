@@ -8,6 +8,7 @@ $pre->execute();
 $user = $pre->fetch(PDO::FETCH_ASSOC);
 if(empty($user)){
      echo "Utilisateur ou mot de passe incorrect !";
+     header('Location:../index.php');
 }else{
      $_SESSION['user'] = $user;
      if($_SESSION['user']['admin'] == 1){
@@ -16,7 +17,5 @@ if(empty($user)){
           header('Location:../index.php');
      }
 }
-
-header('Location:../index.php');
 
 ?>
