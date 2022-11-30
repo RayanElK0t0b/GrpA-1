@@ -1,5 +1,7 @@
 <?php 
-require_once "config.php";
+
+
+require_once "../config.php";
 
 if( isset($_SESSION['user'])){
     if($_SESSION['user']['admin'] == 1 ){ //vérifie si le user est un admin
@@ -11,4 +13,5 @@ if( isset($_SESSION['user'])){
 }else{
     header('Location:index.php');//on le redirige sur la page d'accueil du site*
 }
+
 ?>

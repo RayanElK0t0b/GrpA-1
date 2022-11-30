@@ -1,5 +1,7 @@
 <?php 
-require_once "config.php"; 
+
+require_once "../config.php"; 
+
 $sql = "INSERT INTO contact(fname,lname,email,phone,object,message) VALUES(:fname,:lname,:email,:phone,:object,:message)";
 $dataBinded=array(
     ':fname'   => $_POST['fname'],
@@ -13,4 +15,5 @@ $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
 header('Location:index.php');
+
 ?>

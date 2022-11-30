@@ -1,6 +1,7 @@
 <?php 
 
-require_once "config.php"; 
+require_once "../config.php"; 
+
 $sql = "SELECT * FROM projets " 
 $pre = $pdo->prepare($sql); 
 $pre->execute();

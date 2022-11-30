@@ -1,5 +1,7 @@
 <?php 
-require_once "config.php"; 
+
+require_once "../config.php"; 
+
 $sql = "INSERT INTO user(username,email,password,fname,lname) VALUES(:username,:email,:password,:fname,:lname)";
 $dataBinded=array(
     ':username'=> $_POST['username'],
@@ -12,4 +14,5 @@ $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
 header('Location:index.php');
+
 ?>
