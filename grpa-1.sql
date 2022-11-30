@@ -62,7 +62,6 @@ CREATE TABLE `sign_up` (
   `nom` text NOT NULL,
   `prenom` text NOT NULL,
   `email` varchar(80) NOT NULL,
-  `date de naissance` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
