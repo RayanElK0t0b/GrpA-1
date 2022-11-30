@@ -25,17 +25,16 @@
         </a>
         <ul class="right">
           <li><a href="#about-us">About Us</a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i
-                class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
             <a class="waves-effect waves-light btn modal-trigger secondary" href="#modal2">Connexion</a>
             <div id="modal2" class="modal secondary">
               <div class="modal-content">
                 <p class="center-align no-space">You can login :
-                  <a href="index-login.php" class="center btn login-btn">Login</a>
-                  <br>Create an account : 
-                  <a class="center btn login-signup">Sign Up</a>
+                  <a href="index-login.php" class="center btn">Login</a>
+                  <br>Create an account :
+                  <a href="index-signup.php" class="center btn">Sign Up</a>
                 </p>
               </div>
             </div>
@@ -121,6 +120,7 @@
       </div>
       <i class="material-icons col l1 hide-on-med-and-down primary carousel-arrow-right center">arrow_forward</i>
     </div>
+
     <!--Contact Form & Footer-->
 
     <footer id=contact class="page-footer primary">

@@ -14,60 +14,28 @@
     <title>RKGR Login</title>
   </head>
 
-  <body>
+  <body class="primary">
+    <a href="index.php">
+      <img src="img/logo_small.png" class="my-logo" alt="Logo RKGR">
+    </a>
     <div class="row connect-boxes">
-      <div class="col l8 s10 m10 offset-l2 offset-m1 offset-s1">
-        <div class="card primary">
-          <div class="card-content secondary">
-            <span class="card-title center-align">Login</span>
+      <div class="col l8 s10 m10 offset-l2 offset-m1 offset-s1 secondary">
+        <h1 class="center-align secondary">Login</h1>
+        <form class="secondary">
+          <div class="row">
+            <div class="input-field col l10 m10 s10 offset-l1 offset-m1 offset-s1">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate" placeholder="Email">
+            </div>
           </div>
-          <form class="secondary">
-            <div class="row">
-              <div class="input-field col l6 m6 s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col l6 m6 s12">
-                <i class="material-icons prefix">account_box</i>
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
+          <div class="row">
+            <div class="input-field col l10 m10 s10 offset-l1 offset-m1 offset-s1">
+              <i class="material-icons prefix">lock</i>
+              <input id="password" type="password" class="validate" placeholder="password">
             </div>
-            <div class="row">
-              <div class="input-field col l6 m6 s12">
-                <i class="material-icons prefix">email</i>
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
-              <div class="input-field col l6 m6 s12">
-                <i class="material-icons prefix">phone</i>
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Phone Number</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col l6 m6 s12">
-                <i class="material-icons prefix">short_text</i>
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Subject</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col l12 m12 s12">
-                <i class="material-icons prefix">text_fields</i>
-                <textarea id="textarea2" class="materialize-textarea"></textarea>
-                <label for="textarea2">Textarea</label>
-              </div>
-            </div>
-            <div>
-              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-              </button>
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat right-align">Cancel</a>
-            </div>
-          </form>
-        </div>
+          </div>
+          <button class="btn btn-1 waves-effect waves-light" type="submit" name="action">login</button>
+        </form>
       </div>
     </div>
   </body>

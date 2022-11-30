@@ -5369,7 +5369,6 @@ button.btn-floating {
 }
 
 .fixed-action-btn.direction-left ul li, .fixed-action-btn.direction-right ul li {
-  display: inline-block;
   margin: 7.5px 15px 0 0;
 }
 
@@ -6103,19 +6102,19 @@ label {
    ========================================================================== */
 /* Style Placeholders */
 ::-webkit-input-placeholder {
-  color: #d1d1d1;
+  color: #131313;
 }
 ::-moz-placeholder {
-  color: #d1d1d1;
+  color: #131313;
 }
 :-ms-input-placeholder {
-  color: #d1d1d1;
+  color: #131313;
 }
 ::-ms-input-placeholder {
-  color: #d1d1d1;
+  color: #131313;
 }
 ::placeholder {
-  color: #d1d1d1;
+  color: #131313;
 }
 
 /* Text inputs */
