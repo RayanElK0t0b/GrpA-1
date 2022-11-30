@@ -1,6 +1,6 @@
 <?php 
   require "config.php" 
-  //require "security/admin.php" 
+  require "security/admin.php" 
 ?>
 
 <!DOCTYPE html>
