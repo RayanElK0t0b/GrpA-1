@@ -24,7 +24,7 @@
   <div class="client secondary">
     <div class="row hide-on-large-only no-space">
       <div class="col m12 s12">
-        <img src="img/endgamecarousel.jpg" class="responsive-img" alt="Marvel Banner">
+        <img src="img/marvelbanner.jpg" class="responsive-img" alt="Marvel Banner">
       </div>
     </div>
     <div class="no-space row">

@@ -25,7 +25,7 @@
   <div class="client secondary">
     <div class="row hide-on-large-only no-space">
       <div class="col m12 s12">
-        <img src="img/mrbeastcarousel.jpg" class="responsive-img" alt="MrBeast Banner">
+        <img src="img/chch.jpg" class="responsive-img" alt="MrBeast Banner">
       </div>
     </div>
     <div class="no-space row">
