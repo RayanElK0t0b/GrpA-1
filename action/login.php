@@ -9,9 +9,9 @@ if(empty($user)){
 }else{
      $_SESSION['user'] = $user;
      if($_SESSION['user']['admin'] == 1){
-          header('Location:../adminoanel.php')
+          header('Location:../adminoanel.php');
      }else{
-          header('Location:../index.php')
+          header('Location:../index.php');
      }
 }
 
