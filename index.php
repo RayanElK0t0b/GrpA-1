@@ -133,42 +133,42 @@
               <div class="modal-content secondary">
                 <h4>Contact Form :</h4>
                 <div class="row">
-                  <form class="col l12 m12 s12">
+                  <form class="col l12 m12 s12" method="post" action="contact.php">
                     <div class="row">
                       <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
+                        <input id="fname" name="fname" type="text" class="validate">
+                        <label for="fname">First Name</label>
                       </div>
                       <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">account_box</i>
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
+                        <input id="lname" name="lname" type="text" class="validate">
+                        <label for="lname">Last Name</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">email</i>
-                        <input id="email" type="email" class="validate">
+                        <input id="email" name="email" type="email" class="validate">
                         <label for="email">Email</label>
                       </div>
                       <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">phone</i>
-                        <input id="icon_telephone" type="tel" class="validate">
+                        <input id="icon_telephone" name="phone" type="tel" class="validate">
                         <label for="icon_telephone">Phone Number</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">short_text</i>
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Subject</label>
+                        <textarea id="textarea1" name="object" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Object</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col l12 m12 s12">
                         <i class="material-icons prefix">text_fields</i>
-                        <textarea id="textarea2" class="materialize-textarea"></textarea>
+                        <textarea id="textarea2" name="message" class="materialize-textarea"></textarea>
                         <label for="textarea2">Textarea</label>
                       </div>
                     </div>
