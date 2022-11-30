@@ -44,7 +44,17 @@
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
           <h2 class="title">User Gestion</h2>
           <div>
-            aaaaaaaaaaaaaa
+            <?php
+              $sql = "SELECT * FROM user"; 
+              $pre = $pdo->prepare($sql); 
+              $pre->execute();
+              $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    
+              foreach($data as $user) ?>
+            <div class="bloc_user">
+              <h2><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username'] ?></h2>
+              <span class="email"><?php echo $user['email'] ?></span>
+            </div>
           </div>   
         </div>
       </div>
