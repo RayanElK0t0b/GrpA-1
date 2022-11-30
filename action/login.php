@@ -12,7 +12,7 @@ if(empty($user)){
 }else{
      $_SESSION['user'] = $user;
      if($_SESSION['user']['admin'] == 1){
-          header('Location:../adminoanel.php');
+          header('Location:../adminpanel.php');
      }else{
           header('Location:../index.php');
      }
