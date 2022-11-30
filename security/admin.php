@@ -7,8 +7,10 @@ if( isset($_SESSION['user'])){
 
     }else{
         header('Location:index.php');//on le redirige sur la page d'accueil du site
+        alert("Vous n'êtes pas admin")
     }
 }else{
-    header('Location:index.php');//on le redirige sur la page d'accueil du site
+    header('Location:index.php');//on le redirige sur la page d'accueil du site*
+    alert("Vous n'êtes pas connecter")
 }
 ?>
