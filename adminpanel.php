@@ -54,12 +54,12 @@ include("queries/homeElements.php");
               foreach($data as $user){ ?>
             <div class="bloc_user">
               <p><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username']." admin = ".$user['admin'] ?></p>
-              <form class="" action="action\toogle-admin.php" method="post">
+              <form action="action\toogle-admin.php" method="post">
                 <input type="hidden" name="user" value="<?php echo $user['username'];?>">
                 <input type="hidden" name="rank" value="<?php echo $user['admin'];?>">
                 <input type="submit" name="Toogle Admin" value="Toogle Admin">
               </form>
-              <form class="" action="action\delete-user.php" method="post">
+              <form action="action\delete-user.php" method="post">
                 <input type="hidden" name="user" value="<?php echo $user['username'];?>">
                 <input type='submit' name="Delete User" value="delete User">
               </form>
@@ -92,23 +92,40 @@ include("queries/homeElements.php");
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
           <h2 class="title">Main Page Change</h2>
           <div>
-            <form>
+            <form action="action\firstpage.php" method="post">
+              <p>Title page</p>
               <textarea name="title"><?php echo $home['title'] ?></textarea>
+              <p>Navbar partie 1</p>
               <textarea name="navbarsec1"><?php echo $home['navbarsec1'] ?></textarea>
+              <p>Navbar parti 2</p>
               <textarea name="navbarsec2"><?php echo $home['navbarsec2'] ?></textarea>
+              <p>Parallax</p>
               <textarea name="parallax"><?php echo $home['parallax'] ?></textarea>
+              <p>Title</p>
               <textarea name="h1"><?php echo $home['h1'] ?></textarea>
+              <p>partie 1</p>
               <textarea name="sec1"><?php echo $home['sec1'] ?></textarea>
+              <p>nom premiere personne</p>
               <textarea name="nom1"><?php echo $home['nom1'] ?></textarea>
+              <p>competence premiere personne</p>
               <textarea name="comp1"><?php echo $home['comp1'] ?></textarea>
+              <p>description premiere personne</p>
               <textarea name="desc1"><?php echo $home['desc1'] ?></textarea>
+              <p>nom deuxieme personne</p>
               <textarea name="nom2"><?php echo $home['nom2'] ?></textarea>
+              <p>competence deuxieme personne</p>
               <textarea name="comp2"><?php echo $home['comp2'] ?></textarea>
+              <p>description deuxieme personne</p>
               <textarea name="desc2"><?php echo $home['desc2'] ?></textarea>
+              <p>partie 2</p>
               <textarea name="sec2"><?php echo $home['sec2'] ?></textarea>
+              <p>text partie 2</p>
               <textarea name="txtsec2"><?php echo $home['txtsec2'] ?></textarea>
+              <p>text footer</p>
               <textarea name="footertxt"><?php echo $home['footertxt'] ?></textarea>
+              <p>Logo</p>
               <textarea name="logo"><?php echo $home['logo'] ?></textarea>
+              <input type="submit" name="Valider" value="Valider">
             </form>
           </div> 
         </div>
