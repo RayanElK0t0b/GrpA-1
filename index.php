@@ -41,9 +41,9 @@
           </li>
         </ul>
         <ul id="dropdown1" class="dropdown-content">
-          <li><a href="index-p1.php">Canal+</a></li>
-          <li><a href="index-p2.php">Marvel</a></li>
-          <li><a href="index-p3.php">Mr.Beast</a></li>
+          <li><a href="projects.php?id=1">Canal+</a></li>
+          <li><a href="projects.php?id=2">Marvel</a></li>
+          <li><a href="projects.php?id=3">Mr.Beast</a></li>
         </ul>
       </div>
     </nav>
@@ -114,9 +114,9 @@
     <div class="row no-space primary">
       <i class="material-icons col l1 hide-on-med-and-down primary carousel-arrow-left center">arrow_back</i>
       <div class="carousel carousel-slider col l10 m12 s12">
-        <a class="carousel-item" href="index-p3.php"><img src="img/mrbeastcarousel.jpg" alt="Banner of MrBeast"></a>
-        <a class="carousel-item" href="index-p2.php"><img src="img/endgamecarousel.jpg" alt="EndGame Banner"></a>
-        <a class="carousel-item" href="index-p1.php"><img src="img/canalcarousel.jpg" alt="Canal+ Banner"></a>
+        <a class="carousel-item" href="projects.php?id=1"><img src="img/mrbeastcarousel.jpg" alt="Banner of MrBeast"></a>
+        <a class="carousel-item" href="projects.php?id=2"><img src="img/endgamecarousel.jpg" alt="EndGame Banner"></a>
+        <a class="carousel-item" href="projects.php?id=3"><img src="img/canalcarousel.jpg" alt="Canal+ Banner"></a>
       </div>
       <i class="material-icons col l1 hide-on-med-and-down primary carousel-arrow-right center">arrow_forward</i>
     </div>
