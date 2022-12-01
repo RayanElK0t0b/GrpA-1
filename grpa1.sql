@@ -126,8 +126,8 @@ INSERT INTO `projets` (`id_projet`, `name`) VALUES
 
 DROP TABLE IF EXISTS `textes`;
 CREATE TABLE IF NOT EXISTS `textes` (
-  `id-text` int(11) NOT NULL AUTO_INCREMENT,
-  `id-projet` int(11) NOT NULL,
+  `id_text` int(11) NOT NULL AUTO_INCREMENT,
+  `id_projet` int(11) NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id-text`)
 ) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
