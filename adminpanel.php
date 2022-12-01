@@ -54,7 +54,7 @@
             <div class="bloc_user">
               <p><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username'] ?></p>
               <input type='button' name="Toogle Admin" value="<?php $sql = "UPDATE user SET 'admin' =". $user['admin'] == 1 ? "0" : "1" ." WHERE 'username' =". $user['username'] ?>" >
-              <input type='button' name="Delete User" value="">
+              <input type='button' name="Delete User" value="delete" action="action/deleteuser.php">
             </div>
             <?php } ?>
           </div>   
@@ -80,6 +80,32 @@
         </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
+          <h2 class="title">Main Page Change</h2>
+          <div>
+            <form>
+              <textarea name="title">Oui</textarea>
+              <textarea name="navbarsec1">....</textarea>
+              <textarea name="navbarsec2">....</textarea>
+              <textarea name="parallax">....</textarea>
+              <textarea name="h1">....</textarea>
+              <textarea name="sec1">....</textarea>
+              <textarea name="nom1">....</textarea>
+              <textarea name="comp1">....</textarea>
+              <textarea name="desc1">....</textarea>
+              <textarea name="nom2">....</textarea>
+              <textarea name="comp2">....</textarea>
+              <textarea name="desc2">....</textarea>
+              <textarea name="sec2">....</textarea>
+              <textarea name="txtsec2">....</textarea>
+              <textarea name="footer.txt">....</textarea>
+              <textarea name="logo">....</textarea>
+            </form>
+          </div> 
+        </div>
+      </div>
+    </div>
 
     <!--Footer-->
 

@@ -1,6 +1,6 @@
 <?php 
 include("config.php");
-include("queries/projectsElements.php");
+include("queries/elements.php");
 ?>
 
 <!DOCTYPE html>
