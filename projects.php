@@ -1,3 +1,8 @@
+<?php 
+include("config.php");
+include("queries/projectsElements.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +16,7 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
-  <title>RKGR - Canal+</title>
+  <title>RKGR - <?php echo $textes[0]['text'] ?></title>
 </head>
 
 <body>
@@ -25,36 +30,34 @@
   <div class="client secondary">
     <div class="row hide-on-large-only no-space">
       <div class="col m12 s12">
-        <img src="img/canalbanner.jpg" class="responsive-img" alt="Canal+ Banner">
+        <img src="<?php echo $images[0]['img_url'] ?>" class="responsive-img" alt="Canal+ Banner">
       </div>
     </div>
     <div class="no-space row">
       <div class="col l2 m10 s10 offset-l1 offset-m1 offset-s1">
-        <h1 class="title center Ctitle hide-on-med-and-down">Canal+</h1>
-        <h2 class="title center hide-on-large-only">Canal+</h2>
+        <h1 class="title center Ctitle hide-on-med-and-down"><?php echo $textes[0]['text'] ?></h1>
+        <h2 class="title center hide-on-large-only"><?php echo $textes[0]['text'] ?></h2>
         <p class="text center hide-on-med-and-down">
-          They are the first television company in numbers of sucribers and brand image in France.
-          They offer a diversified service going from sports to series and movies.
+        <?php echo $paragraphes[0]['paragraphe'] ?>
         </p>
         <p class="center hide-on-large-only">
-          They are the first television company in numbers of sucribers and brand image in France.
-          They offer a diversified service going from sports to series and movies.
+        <?php echo $paragraphes[0]['paragraphe'] ?>
         </p>
         <div class="number row text hide-on-med-and-down">
-          <div class="col l4 m4 s4 offset-l1 offset-m1 offset-s1">23,9m suscribers in 2022</div>
-          <div class="col l4 m4 s4 offset-l2 offset-m2 offset-s2">9,6m sucribers in France</div>
-          <div class="col l4 m4 s4 offset-l1 offset-m1 offset-s1">~45 channels</div>
-          <div class="col l4 m4 s4 offset-l2 offset-m2 offset-s2">2873m euro in 2022</div>
+          <div class="col l4 m4 s4 offset-l1 offset-m1 offset-s1"><?php echo $textes[1]['text'] ?></div>
+          <div class="col l4 m4 s4 offset-l2 offset-m2 offset-s2"><?php echo $textes[2]['text'] ?></div>
+          <div class="col l4 m4 s4 offset-l1 offset-m1 offset-s1"><?php echo $textes[3]['text'] ?></div>
+          <div class="col l4 m4 s4 offset-l2 offset-m2 offset-s2"><?php echo $textes[4]['text'] ?></div>
         </div>
         <div class="number hide-on-large-only row">
-          <div class="col l4 m4 s4 offset-l1 offset-m1 offset-s1">23,9m suscribers in 2022</div>
-          <div class="col l4 m4 s4 offset-l2 offset-m2 offset-s2">9,6m sucribers in France</div>
-          <div class="col l4 m4 s4 offset-l1 offset-m1 offset-s1">~45 channels</div>
-          <div class="col l4 m4 s4 offset-l2 offset-m2 offset-s2">2873m euro in 2022</div>
+          <div class="col l4 m4 s4 offset-l1 offset-m1 offset-s1"><?php echo $textes[1]['text'] ?></div>
+          <div class="col l4 m4 s4 offset-l2 offset-m2 offset-s2"><?php echo $textes[2]['text'] ?></div>
+          <div class="col l4 m4 s4 offset-l1 offset-m1 offset-s1"><?php echo $textes[3]['text'] ?></div>
+          <div class="col l4 m4 s4 offset-l2 offset-m2 offset-s2"><?php echo $textes[4]['text'] ?></div>
         </div>
       </div>
       <div class="col l8 offset-l1 hide-on-med-and-down">
-        <img src="img/canalbanner.jpg" class="responsive-img" alt="Canal+ Banner">
+        <img src="<?php echo $images[0]['img_url'] ?>" class="responsive-img" alt="Canal+ Banner">
       </div>
     </div>
   </div>
@@ -64,11 +67,8 @@
   <div class="role col l12 row primary no-space">
     <div class="text col s12 m12 l12 center no-space">
       <h2 class="col s12 m12 l12 center">RKGR Role</h2>
-      <h4 class="col s12 m12 l12">Part of realisation and sound engeneering</h4>
-      <p class="col s12 m12 l12">From October 2009 to August 2014 RKGR was working with the realisation and
-        soundengeneering of
-        Canal+
-        adjusting sound of series and setting up studio for tv shows.</p>
+      <h4 class="col s12 m12 l12"><?php echo $textes[5]['text'] ?></h4>
+      <p class="col s12 m12 l12"><?php echo $paragraphes[1]['paragraphe'] ?></p>
     </div>
   </div>
 
@@ -82,26 +82,25 @@
     </div>
     <div class="row">
       <div class="col l2 m4 s4 offset-l2 offset-m2 offset-s1 ">
-        <img src="img/realisation.jpg" alt="Realisation Image">
+        <img src="<?php echo $images[1]['img_url'] ?>" alt="Realisation Image">
       </div>
       <div class="col l4 m8 s8 offset-l2 offset-m2 offset-s1 txt">
-        <h3>Realization Director</h3>
-        <p>The director of realization is responsible for directing a film or television program. He has a creative, management and technical and artistic role. Realizing TV shows was pretty challenging at first, but learning those skills was very rewarding. 
-        </p>
+        <h3><?php echo $textes[6]['text'] ?></h3>
+        <p><?php echo $paragraphes[2]['paragraphe'] ?> </p>
       </div>
     </div>
     <div class="row no-space">
       <div class="col m4 s4 offset-m2 offset-s1 hide-on-large-only">
-        <img src="img/soundengineering.jfif" alt="Sound Engeneering Image">
+        <img src="<?php echo $images[2]['img_url'] ?>" alt="Sound Engeneering Image">
       </div>
       <div class="col l4 m8 s8 offset-l2 offset-m2 offset-s1 txt">
-        <h3>Leading Sound Engineering</h3>
+        <h3><?php echo $textes[7]['text'] ?></h3>
         <p>
-          A sound engineer is responsible for the technical side of a recording or live performance. The sound engineer designs and manages sound levels and outputs, and is responsible for maintaining the physical sound equipment, like amps and microphones.
+        <?php echo $paragraphes[3]['paragraphe'] ?>
         </p>
       </div>
       <div class="col l2 offset-l1 hide-on-med-and-down">
-        <img src="img/soundengineering.jfif" alt="Soung Engeneering Image">
+        <img src="<?php echo $images[2]['img_url'] ?>" alt="Soung Engeneering Image">
       </div>
     </div>
   </div>
