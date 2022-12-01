@@ -1,7 +1,6 @@
 <?php
 include("config.php");
 include("queries/homeElements.php");
-include("queries/projectsElements.php")
 //require "security/admin.php";
 ?>
 
@@ -77,50 +76,56 @@ include("queries/projectsElements.php")
               $sql = "SELECT * FROM projets"; 
               $pre = $pdo->prepare($sql); 
               $pre->execute();
-              $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+              $projets = $pre->fetchAll(PDO::FETCH_ASSOC);
     
-              foreach($data as $user){ ?>
-            <div class="bloc_projets">
-              <p><?php echo $user['name']?></p>
-              <form action="action\firstpage.php" method="post">
-                <p>Nom du projet</p>
-                <textarea name="nomProj"><?php echo $home['title'] ?></textarea>
-                <p>Titre</p>
-                <textarea name="titreProj"><?php echo $home['navbarsec1'] ?></textarea>
-                <p>Chiffre 1</p>
-                <textarea name="c1"><?php echo $home['navbarsec2'] ?></textarea>
-                <p>Chiffre 2</p>
-                <textarea name="c2"><?php echo $home['parallax'] ?></textarea>
-                <p>Chiffre 3</p>
-                <textarea name="c3"><?php echo $home['h1'] ?></textarea>
-                <p>Chiffre 4</p>
-                <textarea name="c4"><?php echo $home['sec1'] ?></textarea>
-                <p>Role</p>
-                <textarea name="titreRole"><?php echo $home['nom1'] ?></textarea>
-                <p>Compétence 1</p>
-                <textarea name="compet1"><?php echo $home['comp1'] ?></textarea>
-                <p>Compétence 2</p>
-                <textarea name="compet2"><?php echo $home['desc1'] ?></textarea>
-                <p>Présentation Client</p>
-                <textarea name="descClient"><?php echo $home['nom2'] ?></textarea>
-                <p>Présentation Rôle</p>
-                <textarea name="descRole"><?php echo $home['comp2'] ?></textarea>
-                <p>Présentation Compétence 1</p>
-                <textarea name="descCompet1"><?php echo $home['desc2'] ?></textarea>
-                <p>Présentation Compétence 2</p>
-                <textarea name="descCompet2"><?php echo $home['sec2'] ?></textarea>
-                <p>Image Carrousel</p>
-                <textarea name="imgCarousel"><?php echo $home['txtsec2'] ?></textarea>
-                <p>Image Client</p>
-                <textarea name="imgClient"><?php echo $home['footertxt'] ?></textarea>
-                <p>Image Compétence 1</p>
-                <textarea name="imgComp1"><?php echo $home['logo'] ?></textarea>
-                <p>Image Compétence 2</p>
-                <textarea name="imgComp2"><?php echo $home['logo'] ?></textarea>
-                <input type="submit" name="Valider" value="Valider">
-              </form>
-            </div>
-            <?php } ?>
+              foreach($projets as $proj){  
+
+                $sql = "SELECT * FROM textes WHERE id_projet='".$projets['id_projets']."'"; 
+                $pre = $pdo->prepare($sql); 
+                $pre->execute();
+                $textes = $pre->fetchAll(PDO::FETCH_ASSOC);?>
+
+                <div class="bloc_projets">
+                  <p><?php echo $proj['name']?></p>
+                  <form action="action\firstpage.php" method="post">
+                    <p>Nom du projet</p>
+                    <textarea name="nomProj"><?php echo $home['title'] ?></textarea>
+                    <p>Titre</p>
+                    <textarea name="titreProj"><?php echo $home['navbarsec1'] ?></textarea>
+                    <p>Chiffre 1</p>
+                    <textarea name="c1"><?php echo $home['navbarsec2'] ?></textarea>
+                    <p>Chiffre 2</p>
+                    <textarea name="c2"><?php echo $home['parallax'] ?></textarea>
+                    <p>Chiffre 3</p>
+                    <textarea name="c3"><?php echo $home['h1'] ?></textarea>
+                    <p>Chiffre 4</p>
+                    <textarea name="c4"><?php echo $home['sec1'] ?></textarea>
+                    <p>Role</p>
+                    <textarea name="titreRole"><?php echo $home['nom1'] ?></textarea>
+                    <p>Compétence 1</p>
+                    <textarea name="compet1"><?php echo $home['comp1'] ?></textarea>
+                    <p>Compétence 2</p>
+                    <textarea name="compet2"><?php echo $home['desc1'] ?></textarea>
+                    <p>Présentation Client</p>
+                    <textarea name="descClient"><?php echo $home['nom2'] ?></textarea>
+                    <p>Présentation Rôle</p>
+                    <textarea name="descRole"><?php echo $home['comp2'] ?></textarea>
+                    <p>Présentation Compétence 1</p>
+                    <textarea name="descCompet1"><?php echo $home['desc2'] ?></textarea>
+                    <p>Présentation Compétence 2</p>
+                    <textarea name="descCompet2"><?php echo $home['sec2'] ?></textarea>
+                    <p>Image Carrousel</p>
+                    <textarea name="imgCarousel"><?php echo $home['txtsec2'] ?></textarea>
+                    <p>Image Client</p>
+                    <textarea name="imgClient"><?php echo $home['footertxt'] ?></textarea>
+                    <p>Image Compétence 1</p>
+                    <textarea name="imgComp1"><?php echo $home['logo'] ?></textarea>
+                    <p>Image Compétence 2</p>
+                    <textarea name="imgComp2"><?php echo $home['logo'] ?></textarea>
+                    <input type="submit" name="Valider" value="Valider">
+                  </form>
+                </div>
+                <?php } ?>
           </div> 
         </div>
         </div>

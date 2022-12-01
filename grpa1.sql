@@ -172,7 +172,7 @@ INSERT INTO `projets` (`id_projet`, `name`) VALUES
 --
 
 CREATE TABLE `textes` (
-  `id-text` int(11) NOT NULL,
+  `id_text` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
   `text` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -181,7 +181,7 @@ CREATE TABLE `textes` (
 -- Contenu de la table `textes`
 --
 
-INSERT INTO `textes` (`id-text`, `id_projet`, `text`) VALUES
+INSERT INTO `textes` (`id_text`, `id_projet`, `text`) VALUES
 (1, 1, 'Canal+'),
 (2, 1, '23,9m suscribers in 2022'),
 (3, 1, '9,6m sucribers in France'),
@@ -258,7 +258,7 @@ ALTER TABLE `paragraphes`
 -- Index pour la table `textes`
 --
 ALTER TABLE `textes`
-  ADD PRIMARY KEY (`id-text`);
+  ADD PRIMARY KEY (`id_text`);
 
 --
 -- Index pour la table `user`
@@ -289,7 +289,7 @@ ALTER TABLE `paragraphes`
 -- AUTO_INCREMENT pour la table `textes`
 --
 ALTER TABLE `textes`
-  MODIFY `id-text` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_text` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
