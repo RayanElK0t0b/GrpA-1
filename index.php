@@ -114,10 +114,9 @@ include("queries/homeElements.php");
     <div class="row no-space primary">
       <i class="material-icons col l1 hide-on-med-and-down primary carousel-arrow-left center">arrow_back</i>
       <div class="carousel carousel-slider col l10 m12 s12">
-        <?php foreach($projets as $data){ ?>
-          <a class="carousel-item" href="projects.php?id=3<?php echo $data['id_projet'] ?>"><img src="<?php echo $carousel[''] ?>" alt="Banner of MrBeast"></a>
-          <a class="carousel-item" href="projects.php?id=2"><img src="img/endgamecarousel.jpg" alt="EndGame Banner"></a>
-          <a class="carousel-item" href="projects.php?id=1"><img src="img/canalcarousel.jpg" alt="Canal+ Banner"></a>
+        <?php foreach($carousel as $data){ ?>
+          <a class="carousel-item" href="projects.php?id=3<?php echo $data['project_id'] ?>"><img src="<?php echo $data['img_url'] ?>" alt="Banner of MrBeast"></a>
+        <?php } ?>
       </div>
       <i class="material-icons col l1 hide-on-med-and-down primary carousel-arrow-right center">arrow_forward</i>
     </div>
