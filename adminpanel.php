@@ -92,7 +92,15 @@ include("queries/homeElements.php");
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
           <h2 class="title">Main Page Change</h2>
           <div>
-            <form action="action\firstpage.php" method="post">
+            <?php
+            
+            $sql = "SELECT * FROM home";     
+            $pre = $pdo->prepare($sql);     
+            $pre->execute();     
+            $data = $pre->fetch(PDO::FETCH_ASSOC);        
+
+            ?> 
+            <form action="action\firstpage.php" method="post" enctype="multipart/form-data">
               <p>Title page</p>
               <textarea name="title"><?php echo $home['title'] ?></textarea>
               <p>Navbar partie 1</p>
@@ -124,7 +132,7 @@ include("queries/homeElements.php");
               <p>text footer</p>
               <textarea name="footertxt"><?php echo $home['footertxt'] ?></textarea>
               <p>Logo</p>
-              <textarea name="logo"><?php echo $home['logo'] ?></textarea>
+              <textarea name="logo"><?php echo $home['logo'] ?></textarea>  
               <input type="submit" name="Valider" value="Valider">
             </form>
           </div> 
