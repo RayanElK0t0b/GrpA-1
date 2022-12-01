@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `textes` (
   `id_text` int(11) NOT NULL AUTO_INCREMENT,
   `id_projet` int(11) NOT NULL,
   `text` text NOT NULL,
-  PRIMARY KEY (`id-text`)
+  PRIMARY KEY (`id_text`)
 ) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
