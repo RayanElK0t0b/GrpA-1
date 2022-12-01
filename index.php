@@ -54,7 +54,7 @@ include("queries/homeElements.php");
     </nav>
 
     <div class="parallax-container">
-      <div class="parallax"><img src="img/videoeditor.webp" alt="Video Editor Picture"></div>
+      <div class="parallax"><img src=<?php echo $home['parallax'] ?> alt="Video Editor Picture"></div>
     </div>
 
     <h1 class="title center secondary no-space"><?php echo $home['h1'] ?></h1>
@@ -115,7 +115,7 @@ include("queries/homeElements.php");
       <i class="material-icons col l1 hide-on-med-and-down primary carousel-arrow-left center">arrow_back</i>
       <div class="carousel carousel-slider col l10 m12 s12">
         <?php foreach($carousel as $data){ ?>
-          <a class="carousel-item" href="projects.php?id=3<?php echo $data['project_id'] ?>"><img src="<?php echo $data['img_url'] ?>" alt="Banner of MrBeast"></a>
+          <a class="carousel-item" href="projects.php?id=<?php echo $data['project_id'] ?>"><img src="<?php echo $data['img_url'] ?>" alt="Banner of MrBeast"></a>
         <?php } ?>
       </div>
       <i class="material-icons col l1 hide-on-med-and-down primary carousel-arrow-right center">arrow_forward</i>

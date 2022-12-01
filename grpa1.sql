@@ -78,15 +78,17 @@ CREATE TABLE `home` (
   `sec2` varchar(200) NOT NULL,
   `txtsec2` text NOT NULL,
   `footertxt` text NOT NULL,
-  `logo` varchar(200) NOT NULL
+  `logo` varchar(200) NOT NULL,
+  `img1` varchar(200) NOT NULL,
+  `img2` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `home`
 --
 
-INSERT INTO `home` (`title`, `navbarsec1`, `navbarsec2`, `parallax`, `h1`, `sec1`, `nom1`, `comp1`, `desc1`, `nom2`, `comp2`, `desc2`, `sec2`, `txtsec2`, `footertxt`, `logo`) VALUES
-('RKGR', 'About us', 'Projects', 'img/videoeditor.webp', 'R.KOTOB & G.REBOUL EDITING', 'ABOUT US', 'Rayan Kotob', 'Video Editor\r\n3D Modeling\r\nGraphic Designer', '"I am editing videos when i should edit my life."--Kotob Rayan--2022\r\nrelkotob@gaming.tech\r\nTinder : RayouLeBG(vraiment très beau', 'Gwen Reboul', 'Sound Engineer\r\nLighting Expert\r\nRealizer', '"Life is like a movie: not everyone have a happy ending"--Reboul Gwen--2022\r\ngreboul@gaming.tech\r\nOnlyFan : ChadGwen_', 'OUR PROJECTS', 'We worked with the best. We offer the best.', '© 2022 Copyright Text\r\nAll Rights Reserved', 'img/logo_small.png');
+INSERT INTO `home` (`title`, `navbarsec1`, `navbarsec2`, `parallax`, `h1`, `sec1`, `nom1`, `comp1`, `desc1`, `nom2`, `comp2`, `desc2`, `sec2`, `txtsec2`, `footertxt`, `logo`, `img1`, `img2`) VALUES
+('RKGR', 'About us', 'Projects', 'img/videoeditor.webp', 'R.KOTOB & G.REBOUL EDITING', 'ABOUT US', 'Rayan Kotob', 'Video Editor\r\n3D Modeling\r\nGraphic Designer', '"I am editing videos when i should edit my life."--Kotob Rayan--2022\r\nrelkotob@gaming.tech\r\nTinder : RayouLeBG(vraiment très beau', 'Gwen Reboul', 'Sound Engineer\r\nLighting Expert\r\nRealizer', '"Life is like a movie: not everyone have a happy ending"--Reboul Gwen--2022\r\ngreboul@gaming.tech\r\nOnlyFan : ChadGwen_', 'OUR PROJECTS', 'We worked with the best. We offer the best.', '© 2022 Copyright Text\r\nAll Rights Reserved', 'img/logo_small.png', 'img/Gwendal.jfif', 'img/mudkip.jfif');
 
 -- --------------------------------------------------------
 

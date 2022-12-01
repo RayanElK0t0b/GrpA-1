@@ -149,8 +149,6 @@ include("queries/homeElements.php");
               <textarea name="navbarsec1"><?php echo $home['navbarsec1'] ?></textarea>
               <p>Navbar parti 2</p>
               <textarea name="navbarsec2"><?php echo $home['navbarsec2'] ?></textarea>
-              <p>Parallax</p>
-              <textarea name="parallax"><?php echo $home['parallax'] ?></textarea>
               <p>Title</p>
               <textarea name="h1"><?php echo $home['h1'] ?></textarea>
               <p>partie 1</p>
@@ -173,8 +171,18 @@ include("queries/homeElements.php");
               <textarea name="txtsec2"><?php echo $home['txtsec2'] ?></textarea>
               <p>text footer</p>
               <textarea name="footertxt"><?php echo $home['footertxt'] ?></textarea>
-              <p>Logo</p>
-              <textarea name="logo"><?php echo $home['logo'] ?></textarea>  
+              <img src="<?php echo $data['logo'] ?>" width="50px">       
+              <input type="file" name="logo">
+              <br>       
+              <img src="<?php echo $data['parallax'] ?>" width="50px">       
+              <input type="file" name="parallax">
+              <br>
+              <img src="<?php echo $data['img1'] ?>" width="50px">       
+              <input type="file" name="img1">
+              <br>       
+              <img src="<?php echo $data['img2'] ?>" width="50px">       
+              <input type="file" name="img2">
+              <br> 
               <input type="submit" name="Valider" value="Valider">
             </form>
           </div> 
