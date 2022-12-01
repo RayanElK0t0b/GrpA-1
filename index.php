@@ -1,3 +1,8 @@
+<?php
+include("config.php");
+include("queries/elements.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +16,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <title>RKGR Editing</title>
+    <title><?php echo $home['title'] ?></title>
   </head>
 
   <body>
@@ -21,11 +26,11 @@
     <nav id=navbar class="grey darken-4">
       <div class="nav-wrapper">
         <a href="#" class="hide-on-small-only">
-          <img src="img/logo_small.png" alt="Logo RKGR">
+          <img src="<?php echo $home['logo'] ?>" alt="Logo RKGR">
         </a>
         <ul class="right">
-          <li><a href="#about-us">About Us</a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a href="#about-us"><?php echo $home['navbarsec1'] ?></a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><?php echo $home['navbarsec2'] ?><i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
             <a class="waves-effect waves-light btn modal-trigger secondary" href="#modal2">Connexion</a>
@@ -52,14 +57,14 @@
       <div class="parallax"><img src="img/videoeditor.webp" alt="Video Editor Picture"></div>
     </div>
 
-    <h1 class="title center secondary no-space">R.KOTOB & G.REBOUL EDITING</h1>
+    <h1 class="title center secondary no-space"><?php echo $home['h1'] ?></h1>
 
     <!--About us section-->
 
     <div id="about-us" class="about-us primary">
       <div class="row">
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
-          <h2 class="title">ABOUT US</h2>
+          <h2 class="title"><?php echo $home['sec2'] ?></h2>
         </div>
       </div>
       <div class="row">
@@ -69,15 +74,12 @@
               <img src="img/mudkip.jfif" class="rayanimg responsive-img" alt="Rayan Profile Picture">
             </div>
             <div class="col l4 m4 s8 offset-m1 offset-s2">
-              <h2 class="primary">Rayan Kotob</h2>
+              <h2 class="primary"><?php echo $home['nom1'] ?></h2>
             </div>
             <div class="col l8 m8 s8 offset-l2 offset-m2 offset-s2">
-              <h3>Video Editor<br>3D Modeling<br>Graphic Designer</h3>
+              <h3><?php echo $home['comp1'] ?></h3>
               <p>
-                "I am editing videos when i should edit my life."--Kotob Rayan--2022
-                <br>relkotob@gaming.tech
-                <br>Tinder : RayouLeBG(vraiment très beau)
-                <br>
+                <?php echo $home['desc1'] ?>
               </p>
             </div>
           </div>
@@ -88,14 +90,12 @@
               <img src="img/Gwendal.jfif" class="gwenimg responsive-img" alt="Gwendal Profile Picture">
             </div>
             <div class="col l4 m4 s8 offset-m1 offset-s2">
-              <h2 class="primary">Gwen Reboul</h2>
+              <h2 class="primary"><?php echo $home['nom2'] ?></h2>
             </div>
             <div class="col l8 m8 s8 offset-l2 offset-m2 offset-s2">
-              <h3 class="col l12">Sound Engineer<br>Lighting Expert<br>Realizer</h3>
+              <h3 class="col l12"><?php echo $home['comp2'] ?></h3>
               <p class="col l12">
-                "Life is like a movie: not everyone have a happy ending"--Reboul Gwen--2022
-                <br>greboul@gaming.tech
-                <br>OnlyFan : ChadGwen_
+                <?php echo $home['desc2'] ?>
               </p>
             </div>
           </div>
@@ -106,8 +106,8 @@
 
       <div class="row no-space">
         <div class="projects-title title col l12 m12 s12 secondary">
-          <h3>OUR PROJECTS</h3>
-          <h4>We worked with the best. We offer the best.</h4>
+          <h3><?php echo $home['sec2'] ?></h3>
+          <h4><?php echo $home['txtsec2'] ?></h4>
         </div>
       </div>
     </div>
@@ -188,8 +188,7 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2022 Copyright Text
-          <p class="right hide-on-small-only">All Rights Reserved</p>
+          <?php echo $home['footertxt'] ?>
         </div>
       </div>
     </footer>
