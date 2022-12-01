@@ -14,4 +14,5 @@ $sql = "SELECT * FROM paragraphes WHERE id_projet='".$_GET['id']."'";
 $pre = $pdo->prepare($sql); 
 $pre->execute();
 $paragraphes = $pre->fetchAll(PDO::FETCH_ASSOC);
+
 ?>

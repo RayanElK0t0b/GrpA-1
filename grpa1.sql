@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `textes` (
 -- Déchargement des données de la table `textes`
 --
 
-INSERT INTO `textes` (`id-text`, `id-projet`, `text`) VALUES
+INSERT INTO `textes` (`id_text`, `id_projet`, `text`) VALUES
 (1, 1, 'Canal+'),
 (2, 1, '23,9m suscribers in 2022'),
 (3, 1, '9,6m sucribers in France'),
