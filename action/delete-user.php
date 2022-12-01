@@ -3,7 +3,7 @@
 
   $a=$_POST['user'];
     
-    $sql = "DELETE user SET admin = '1' WHERE username='$a'";
+    $sql = "DELETE FROM user WHERE username='$a'";
     $pre = $pdo->prepare($sql);
     $pre->execute();
 
