@@ -15,9 +15,4 @@ $pre = $pdo->prepare($sql);
 $pre->execute();
 $paragraphes = $pre->fetchAll(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM home"; 
-$pre = $pdo->prepare($sql); 
-$pre->execute();
-$home = $pre->fetch(PDO::FETCH_ASSOC);
-
 ?>
