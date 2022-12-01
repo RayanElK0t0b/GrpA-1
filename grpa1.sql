@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 01 Décembre 2022 à 18:37
+-- Généré le :  Jeu 01 Décembre 2022 à 18:58
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -19,6 +19,27 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `grpa1`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `carousel`
+--
+
+CREATE TABLE `carousel` (
+  `carousel_img_id` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL,
+  `img_url` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `carousel`
+--
+
+INSERT INTO `carousel` (`carousel_img_id`, `project_id`, `img_url`) VALUES
+(1, 1, 'img/canalcarousel.jpg'),
+(2, 2, 'img/endgamecarousel.jpg'),
+(3, 3, 'img/mrbeastcarousel.jpg');
 
 -- --------------------------------------------------------
 
@@ -216,6 +237,12 @@ INSERT INTO `user` (`username`, `email`, `password`, `first_name`, `last_name`, 
 --
 
 --
+-- Index pour la table `carousel`
+--
+ALTER TABLE `carousel`
+  ADD PRIMARY KEY (`carousel_img_id`);
+
+--
 -- Index pour la table `images`
 --
 ALTER TABLE `images`
@@ -243,6 +270,11 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour les tables exportées
 --
 
+--
+-- AUTO_INCREMENT pour la table `carousel`
+--
+ALTER TABLE `carousel`
+  MODIFY `carousel_img_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `images`
 --
