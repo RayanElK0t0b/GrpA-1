@@ -1,6 +1,7 @@
-<?php 
-  require "config.php";
-  //require "security/admin.php";
+<?php
+include("config.php");
+include("queries/homeElements.php");
+//require "security/admin.php";
 ?>
 
 <!DOCTYPE html>
@@ -92,22 +93,22 @@
           <h2 class="title">Main Page Change</h2>
           <div>
             <form>
-              <textarea name="title">Oui</textarea>
-              <textarea name="navbarsec1">....</textarea>
-              <textarea name="navbarsec2">....</textarea>
-              <textarea name="parallax">....</textarea>
-              <textarea name="h1">....</textarea>
-              <textarea name="sec1">....</textarea>
-              <textarea name="nom1">....</textarea>
-              <textarea name="comp1">....</textarea>
-              <textarea name="desc1">....</textarea>
-              <textarea name="nom2">....</textarea>
-              <textarea name="comp2">....</textarea>
-              <textarea name="desc2">....</textarea>
-              <textarea name="sec2">....</textarea>
-              <textarea name="txtsec2">....</textarea>
-              <textarea name="footer.txt">....</textarea>
-              <textarea name="logo">....</textarea>
+              <textarea name="title"><?php echo $home['title'] ?></textarea>
+              <textarea name="navbarsec1"><?php echo $home['navbarsec1'] ?></textarea>
+              <textarea name="navbarsec2"><?php echo $home['navbarsec2'] ?></textarea>
+              <textarea name="parallax"><?php echo $home['parallax'] ?></textarea>
+              <textarea name="h1"><?php echo $home['h1'] ?></textarea>
+              <textarea name="sec1"><?php echo $home['sec1'] ?></textarea>
+              <textarea name="nom1"><?php echo $home['nom1'] ?></textarea>
+              <textarea name="comp1"><?php echo $home['comp1'] ?></textarea>
+              <textarea name="desc1"><?php echo $home['desc1'] ?></textarea>
+              <textarea name="nom2"><?php echo $home['nom2'] ?></textarea>
+              <textarea name="comp2"><?php echo $home['comp2'] ?></textarea>
+              <textarea name="desc2"><?php echo $home['desc2'] ?></textarea>
+              <textarea name="sec2"><?php echo $home['sec2'] ?></textarea>
+              <textarea name="txtsec2"><?php echo $home['txtsec2'] ?></textarea>
+              <textarea name="footertxt"><?php echo $home['footertxt'] ?></textarea>
+              <textarea name="logo"><?php echo $home['logo'] ?></textarea>
             </form>
           </div> 
         </div>
