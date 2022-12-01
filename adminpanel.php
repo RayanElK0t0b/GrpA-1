@@ -53,7 +53,8 @@
               foreach($data as $user){ ?>
             <div class="bloc_user">
               <p><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username'] ?></p>
-              <span class="email"><?php echo $user['email'] ?></span>
+              <input type='button' name="Toogle Admin" value="<?php $sql = "UPDATE user SET 'admin' =". $user['admin'] == 1 ? "0" : "1" ." WHERE 'username' =". $user['username'] ?>" >
+              <input type='button' name="Delete User" value="">
             </div>
             <?php } ?>
           </div>   
