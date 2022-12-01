@@ -80,7 +80,7 @@ include("queries/homeElements.php");
     
               foreach($projets as $proj){  
 
-                $sql = "SELECT * FROM textes WHERE id_projet='".$projets['id_projets']."'"; 
+                $sql = "SELECT * FROM textes WHERE id_projet ='".$projets['id_projet']."'";   
                 $pre = $pdo->prepare($sql); 
                 $pre->execute();
                 $textes = $pre->fetchAll(PDO::FETCH_ASSOC);?>
