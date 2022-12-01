@@ -188,8 +188,7 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2022 Copyright Text
-          <p class="right hide-on-small-only">All Rights Reserved</p>
+          © 2022 Copyright Text<br>All Rights Reserved
         </div>
       </div>
     </footer>
