@@ -71,7 +71,7 @@ include("queries/homeElements.php");
         <div class="col l6 m12 s12">
           <div class="row">
             <div class="col l4 m4 s8 offset-l2 offset-m2 offset-s2">
-              <img src="img/mudkip.jfif" class="rayanimg responsive-img" alt="Rayan Profile Picture">
+              <img src=<?php echo $home['img1'] ?> class="rayanimg responsive-img" alt="Rayan Profile Picture">
             </div>
             <div class="col l4 m4 s8 offset-m1 offset-s2">
               <h2 class="primary"><?php echo $home['nom1'] ?></h2>
@@ -87,7 +87,7 @@ include("queries/homeElements.php");
         <div class="col l6 m12 s12">
           <div class="row">
             <div class="col l4 m4 s8 offset-l2 offset-m2 offset-s2 ">
-              <img src="img/Gwendal.jfif" class="gwenimg responsive-img" alt="Gwendal Profile Picture">
+              <img src=<?php echo $home['img2'] ?> class="gwenimg responsive-img" alt="Gwendal Profile Picture">
             </div>
             <div class="col l4 m4 s8 offset-m1 offset-s2">
               <h2 class="primary"><?php echo $home['nom2'] ?></h2>

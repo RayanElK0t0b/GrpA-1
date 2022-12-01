@@ -31,6 +31,19 @@ if (!empty($_FILES['parallax']['name'])){
   $sql=$sql.", parallax=:parallax";
   $dataBinded[':parallax']=$destination;
 }
+if (!empty($_FILES['img1']['name'])){
+  $destination = "img/".$_FILES['img1']['name']; //dossier "upload"
+  move_uploaded_file($_FILES['img1']['tmp_name'],"../".$destination);
+  $sql=$sql.", img1=:img1";
+  $dataBinded[':img1']=$destination;
+}
+
+if (!empty($_FILES['img2']['name'])){
+  $destination = "img/".$_FILES['img2']['name']; //dossier "upload"
+  move_uploaded_file($_FILES['img2']['tmp_name'],"../".$destination);
+  $sql=$sql.", img2=:img2";
+  $dataBinded[':img2']=$destination;
+}
 
   $sql = $sql.";";
   $pre = $pdo->prepare($sql); 
