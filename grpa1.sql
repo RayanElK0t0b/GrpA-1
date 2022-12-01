@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
+-- version 4.5.4.1
+-- http://www.phpmyadmin.net
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : mer. 30 nov. 2022 à 11:44
--- Version du serveur : 5.7.36
--- Version de PHP : 7.4.26
+-- Client :  localhost
+-- Généré le :  Jeu 01 Décembre 2022 à 18:13
+-- Version du serveur :  5.7.11
+-- Version de PHP :  5.6.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -18,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `grpa-1`
+-- Base de données :  `grpa1`
 --
 
 -- --------------------------------------------------------
@@ -27,8 +26,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `contact`
 --
 
-DROP TABLE IF EXISTS `contact`;
-CREATE TABLE IF NOT EXISTS `contact` (
+CREATE TABLE `contact` (
   `fname` text NOT NULL,
   `lname` text NOT NULL,
   `email` text NOT NULL,
@@ -40,19 +38,49 @@ CREATE TABLE IF NOT EXISTS `contact` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `home`
+--
+
+CREATE TABLE `home` (
+  `title` varchar(200) NOT NULL,
+  `navbarsec1` varchar(200) NOT NULL,
+  `navbarsec2` varchar(200) NOT NULL,
+  `parallax` varchar(200) NOT NULL,
+  `h1` varchar(200) NOT NULL,
+  `sec1` varchar(200) NOT NULL,
+  `nom1` varchar(200) NOT NULL,
+  `comp1` varchar(200) NOT NULL,
+  `desc1` text NOT NULL,
+  `nom2` varchar(200) NOT NULL,
+  `comp2` varchar(200) NOT NULL,
+  `desc2` text NOT NULL,
+  `sec2` varchar(200) NOT NULL,
+  `txtsec2` text NOT NULL,
+  `footertxt` text NOT NULL,
+  `logo` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `home`
+--
+
+INSERT INTO `home` (`title`, `navbarsec1`, `navbarsec2`, `parallax`, `h1`, `sec1`, `nom1`, `comp1`, `desc1`, `nom2`, `comp2`, `desc2`, `sec2`, `txtsec2`, `footertxt`, `logo`) VALUES
+('RKGR', 'About us', 'Projects', 'img/videoeditor.webp', 'R.KOTOB & G.REBOUL EDITING', 'ABOUT US', 'Rayan Kotob', 'Video Editor\r\n3D Modeling\r\nGraphic Designer', '"I am editing videos when i should edit my life."--Kotob Rayan--2022\r\nrelkotob@gaming.tech\r\nTinder : RayouLeBG(vraiment très beau', 'Gwen Reboul', 'Sound Engineer\r\nLighting Expert\r\nRealizer', '"Life is like a movie: not everyone have a happy ending"--Reboul Gwen--2022\r\ngreboul@gaming.tech\r\nOnlyFan : ChadGwen_', 'OUR PROJECTS', 'We worked with the best. We offer the best.', '© 2022 Copyright Text\r\nAll Rights Reserved', 'img/logo_small.png');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `images`
 --
 
-DROP TABLE IF EXISTS `images`;
-CREATE TABLE IF NOT EXISTS `images` (
-  `id_image` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `images` (
+  `id_image` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
-  `img_url` text NOT NULL,
-  PRIMARY KEY (`id_image`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  `img_url` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `images`
+-- Contenu de la table `images`
 --
 
 INSERT INTO `images` (`id_image`, `id_projet`, `img_url`) VALUES
@@ -72,16 +100,14 @@ INSERT INTO `images` (`id_image`, `id_projet`, `img_url`) VALUES
 -- Structure de la table `paragraphes`
 --
 
-DROP TABLE IF EXISTS `paragraphes`;
-CREATE TABLE IF NOT EXISTS `paragraphes` (
-  `id_paragraphe` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `paragraphes` (
+  `id_paragraphe` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
-  `paragraphe` text NOT NULL,
-  PRIMARY KEY (`id_paragraphe`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+  `paragraphe` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `paragraphes`
+-- Contenu de la table `paragraphes`
 --
 
 INSERT INTO `paragraphes` (`id_paragraphe`, `id_projet`, `paragraphe`) VALUES
@@ -104,39 +130,37 @@ INSERT INTO `paragraphes` (`id_paragraphe`, `id_projet`, `paragraphe`) VALUES
 -- Structure de la table `projets`
 --
 
-DROP TABLE IF EXISTS `projets`;
-CREATE TABLE IF NOT EXISTS `projets` (
+CREATE TABLE `projets` (
   `id_projet` int(11) NOT NULL,
   `name` varchar(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `textes`
+-- Contenu de la table `projets`
 --
 
 INSERT INTO `projets` (`id_projet`, `name`) VALUES
-(1,'Canal'),
-(2,'Marvel'),
-(3,'MrBeast');
+(1, 'Canal'),
+(2, 'Marvel'),
+(3, 'MrBeast');
+
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `textes`
 --
 
-DROP TABLE IF EXISTS `textes`;
-CREATE TABLE IF NOT EXISTS `textes` (
-  `id_text` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `textes` (
+  `id-text` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
-  `text` text NOT NULL,
-  PRIMARY KEY (`id_text`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+  `text` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `textes`
+-- Contenu de la table `textes`
 --
 
-INSERT INTO `textes` (`id_text`, `id_projet`, `text`) VALUES
+INSERT INTO `textes` (`id-text`, `id_projet`, `text`) VALUES
 (1, 1, 'Canal+'),
 (2, 1, '23,9m suscribers in 2022'),
 (3, 1, '9,6m sucribers in France'),
@@ -168,28 +192,72 @@ INSERT INTO `textes` (`id_text`, `id_projet`, `text`) VALUES
 -- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE `user` (
   `username` varchar(20) NOT NULL,
   `email` varchar(60) NOT NULL,
   `password` varchar(60) NOT NULL,
   `first_name` text NOT NULL,
   `last_name` text NOT NULL,
-  `admin` boolean NOT NULL DEFAULT False
+  `admin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-COMMIT;
 
 --
--- Déchargement des données de la table `textes`
+-- Contenu de la table `user`
 --
 
-INSERT INTO `user` (`username`, `email`, `password`,`first_name`, `last_name`, `admin`) VALUES
-('Rayouyou', 'relkotob@gaming.tech', 'motdepasse123','Rayan', 'Kotob', '1'),
-('Perlainpin', 'greboul@gaming.tech', 'motdepasse123','Gwen', 'Reboul', '1'),
-('AhOui', 'email1@gaming.tech', 'motdepasse1234','Joris', 'Boris', '0'),
-('Daccor', 'email2@gaming.tech', 'motdepasse1235','Doron', 'Boron', '0');
+INSERT INTO `user` (`username`, `email`, `password`, `first_name`, `last_name`, `admin`) VALUES
+('Rayouyou', 'relkotob@gaming.tech', 'motdepasse123', 'Rayan', 'Kotob', 1),
+('Perlainpin', 'greboul@gaming.tech', 'motdepasse123', 'Gwen', 'Reboul', 1),
+('AhOui', 'email1@gaming.tech', 'motdepasse1234', 'Joris', 'Boris', 0),
+('Daccor', 'email2@gaming.tech', 'motdepasse1235', 'Doron', 'Boron', 0);
 
+--
+-- Index pour les tables exportées
+--
 
+--
+-- Index pour la table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id_image`);
+
+--
+-- Index pour la table `paragraphes`
+--
+ALTER TABLE `paragraphes`
+  ADD PRIMARY KEY (`id_paragraphe`);
+
+--
+-- Index pour la table `textes`
+--
+ALTER TABLE `textes`
+  ADD PRIMARY KEY (`id-text`);
+
+--
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id_image` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT pour la table `paragraphes`
+--
+ALTER TABLE `paragraphes`
+  MODIFY `id_paragraphe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT pour la table `textes`
+--
+ALTER TABLE `textes`
+  MODIFY `id-text` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
