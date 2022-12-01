@@ -1,6 +1,6 @@
 <?php require_once "config.php";
 
-  $sql = "UPDATE home SET title=:h1, navbarsec1=:h2, navbarsec2 =:p1, p2 =:p2 ";
+  $sql = "UPDATE home SET title=:h1, navbarsec1=:h2, navbarsec2 =:p1, parallax =:p2 ";
   $dataBinded=array(
 
   ':h1'=>$_POST['h1'],
