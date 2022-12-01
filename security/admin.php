@@ -11,7 +11,7 @@ if( isset($_SESSION['user'])){
         header('Location:../index.php');//on le redirige sur la page d'accueil du site
     }
 }else{
-    header('Location:../index.php');//on le redirige sur la page d'accueil du site*
+    header('Location:../index.php');//on le redirige sur la page d'accueil du site
 }
 
 ?>
