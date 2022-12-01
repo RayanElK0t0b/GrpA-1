@@ -53,9 +53,16 @@ include("queries/homeElements.php");
     
               foreach($data as $user){ ?>
             <div class="bloc_user">
-              <p><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username'] ?></p>
-              <input type='button' name="Toogle Admin" value="<?php $sql = "UPDATE user SET 'admin' =". $user['admin'] == 1 ? "0" : "1" ." WHERE 'username' =". $user['username'] ?>" >
-              <input type='button' name="Delete User" value="delete" action="action/deleteuser.php">
+              <p><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username']." admin = ".$user['admin'] ?></p>
+              <form class="" action="action\toogle-admin.php" method="post">
+                <input type="hidden" name="user" value="<?php echo $user['username'];?>">
+                <input type="hidden" name="rank" value="<?php echo $user['admin'];?>">
+                <input type="submit" name="Toogle Admin" value="Toogle Admin">
+              </form>
+              <form class="" action="action\delete-user.php" method="post">
+                <input type="hidden" name="user" value="<?php echo $user['username'];?>">
+                <input type='submit' name="Delete User" value="delete User">
+              </form>
             </div>
             <?php } ?>
           </div>   
