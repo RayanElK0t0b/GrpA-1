@@ -57,18 +57,19 @@ include("queries/homeElements.php");
               <form action="action\toogle-admin.php" method="post">
                 <input type="hidden" name="user" value="<?php echo $user['username'];?>">
                 <input type="hidden" name="rank" value="<?php echo $user['admin'];?>">
-                <input type="submit" name="Toogle Admin" value="Toogle Admin">
+                <input class="btn secondary" type="submit" name="Toogle Admin" value="Toogle Admin">
               </form>
+              <br>
               <form action="action\delete-user.php" method="post">
                 <input type="hidden" name="user" value="<?php echo $user['username'];?>">
-                <input type='submit' name="Delete User" value="delete User">
+                <input class="btn secondary" type='submit' name="Delete User" value="delete User">
               </form>
             </div>
             <?php } ?>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row primary">
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
           <h2 class="title">Project Gestion</h2>
           <div>
@@ -80,57 +81,76 @@ include("queries/homeElements.php");
 
               foreach($projets as $proj){
 
-                $sql = "SELECT * FROM textes WHERE id_projet ='".$projets['id_projet']."'";
+                $sql = "SELECT * FROM textes WHERE id_projet ='".$proj['id_projet']."'";
                 $pre = $pdo->prepare($sql);
                 $pre->execute();
-                $textes = $pre->fetchAll(PDO::FETCH_ASSOC);?>
+                $textes = $pre->fetchAll(PDO::FETCH_ASSOC);
+
+                $sql = "SELECT * FROM paragraphes WHERE id_projet ='".$proj['id_projet']."'";
+                $pre = $pdo->prepare($sql);
+                $pre->execute();
+                $paragraphes = $pre->fetchAll(PDO::FETCH_ASSOC);
+
+                $sql = "SELECT * FROM images WHERE id_projet ='".$proj['id_projet']."'";
+                $pre = $pdo->prepare($sql);
+                $pre->execute();
+                $images = $pre->fetchAll(PDO::FETCH_ASSOC);
+
+                $sql = "SELECT * FROM carousel WHERE project_id ='".$proj['id_projet']."'";
+                $pre = $pdo->prepare($sql);
+                $pre->execute();
+                $carousel = $pre->fetchAll(PDO::FETCH_ASSOC);
+                ?>
 
                 <div class="bloc_projets">
                   <p><?php echo $proj['name']?></p>
-                  <form action="action\firstpage.php" method="post">
-                    <p>Nom du projet</p>
-                    <textarea name="nomProj"><?php echo $home['title'] ?></textarea>
+                  <form action="action\projectAuto.php" method="post">
                     <p>Titre</p>
-                    <textarea name="titreProj"><?php echo $home['navbarsec1'] ?></textarea>
+                    <textarea name="titreProj" class="primary"><?php echo $textes[0]['text'] ?></textarea>
                     <p>Chiffre 1</p>
-                    <textarea name="c1"><?php echo $home['navbarsec2'] ?></textarea>
+                    <textarea name="c1" class="primary"><?php echo $textes[1]['text'] ?></textarea>
                     <p>Chiffre 2</p>
-                    <textarea name="c2"><?php echo $home['parallax'] ?></textarea>
+                    <textarea name="c2" class="primary"><?php echo $textes[2]['text'] ?></textarea>
                     <p>Chiffre 3</p>
-                    <textarea name="c3"><?php echo $home['h1'] ?></textarea>
+                    <textarea name="c3" class="primary"><?php echo $textes[3]['text'] ?></textarea>
                     <p>Chiffre 4</p>
-                    <textarea name="c4"><?php echo $home['sec1'] ?></textarea>
+                    <textarea name="c4" class="primary"><?php echo $textes[4]['text'] ?></textarea>
                     <p>Role</p>
-                    <textarea name="titreRole"><?php echo $home['nom1'] ?></textarea>
+                    <textarea name="titreRole" class="primary"><?php echo $textes[5]['text'] ?></textarea>
                     <p>Compétence 1</p>
-                    <textarea name="compet1"><?php echo $home['comp1'] ?></textarea>
+                    <textarea name="compet1" class="primary"><?php echo $textes[6]['text'] ?></textarea>
                     <p>Compétence 2</p>
-                    <textarea name="compet2"><?php echo $home['desc1'] ?></textarea>
+                    <textarea name="compet2" class="primary"><?php echo $textes[7]['text'] ?></textarea>
                     <p>Présentation Client</p>
-                    <textarea name="descClient"><?php echo $home['nom2'] ?></textarea>
+                    <textarea name="descClient" class="primary"><?php echo $paragraphes[0]['paragraphe'] ?></textarea>
                     <p>Présentation Rôle</p>
-                    <textarea name="descRole"><?php echo $home['comp2'] ?></textarea>
+                    <textarea name="descRole" class="primary"><?php echo $paragraphes[1]['paragraphe'] ?></textarea>
                     <p>Présentation Compétence 1</p>
-                    <textarea name="descCompet1"><?php echo $home['desc2'] ?></textarea>
+                    <textarea name="descCompet1" class="primary"><?php echo $paragraphes[2]['paragraphe'] ?></textarea>
                     <p>Présentation Compétence 2</p>
-                    <textarea name="descCompet2"><?php echo $home['sec2'] ?></textarea>
+                    <textarea name="descCompet2" class="primary"><?php echo $paragraphes[3]['paragraphe'] ?></textarea>
                     <p>Image Carrousel</p>
-                    <textarea name="imgCarousel"><?php echo $home['txtsec2'] ?></textarea>
+                    <textarea name="imgCarousel" class="primary"><?php echo $carousel[0]['img_url'] ?></textarea>
                     <p>Image Client</p>
-                    <textarea name="imgClient"><?php echo $home['footertxt'] ?></textarea>
+                    <textarea name="imgClient" class="primary"><?php echo $images[0]['img_url'] ?></textarea>
                     <p>Image Compétence 1</p>
-                    <textarea name="imgComp1"><?php echo $home['logo'] ?></textarea>
+                    <textarea name="imgComp1" class="primary"><?php echo $images[1]['img_url'] ?></textarea>
                     <p>Image Compétence 2</p>
-                    <textarea name="imgComp2"><?php echo $home['logo'] ?></textarea>
-                    <input type="submit" name="Valider" value="Valider">
+                    <textarea name="imgComp2" class="primary"><?php echo $images[2]['img_url'] ?></textarea>
+                    <input class="btn secondary" type="submit" name="Valider" value="Valider">
+                  </form>
+                  <form action="action\delete-project.php" method="post">
+                    <input type="hidden" name="project" value="<?php echo $proj['id_projet'];?>">
+                    <input class="btn secondary" type='submit' name="Delete Project" value="Delete Project">
                   </form>
                 </div>
                 <?php } ?>
+                <a href="newprojet.php" class="btw secondary">Create</a>
+              </div>
           </div>
         </div>
-        </div>
       </div>
-      <div class="row">
+      <div class="row primary">
         <div class="col l4 m4 s10 offset-l4 offset-m2 offset-s2">
           <h2 class="title">Main Page Change</h2>
           <div>
@@ -142,35 +162,35 @@ include("queries/homeElements.php");
             $data = $pre->fetch(PDO::FETCH_ASSOC);
 
             ?>
-            <form action="action\firstpage.php" method="post" enctype="multipart/form-data">
+            <form class="primary" action="action\firstpage.php" method="post" enctype="multipart/form-data">
               <p>Title page</p>
-              <textarea name="title"><?php echo $home['title'] ?></textarea>
+              <textarea class="primary" name="title"><?php echo $home['title'] ?></textarea>
               <p>Navbar partie 1</p>
-              <textarea name="navbarsec1"><?php echo $home['navbarsec1'] ?></textarea>
+              <textarea class="primary" name="navbarsec1"><?php echo $home['navbarsec1'] ?></textarea>
               <p>Navbar parti 2</p>
-              <textarea name="navbarsec2"><?php echo $home['navbarsec2'] ?></textarea>
+              <textarea class="primary" name="navbarsec2"><?php echo $home['navbarsec2'] ?></textarea>
               <p>Title</p>
-              <textarea name="h1"><?php echo $home['h1'] ?></textarea>
+              <textarea class="primary" name="h1"><?php echo $home['h1'] ?></textarea>
               <p>partie 1</p>
-              <textarea name="sec1"><?php echo $home['sec1'] ?></textarea>
+              <textarea class="primary" name="sec1"><?php echo $home['sec1'] ?></textarea>
               <p>nom premiere personne</p>
-              <textarea name="nom1"><?php echo $home['nom1'] ?></textarea>
+              <textarea class="primary" name="nom1"><?php echo $home['nom1'] ?></textarea>
               <p>competence premiere personne</p>
-              <textarea name="comp1"><?php echo $home['comp1'] ?></textarea>
+              <textarea class="primary" name="comp1"><?php echo $home['comp1'] ?></textarea>
               <p>description premiere personne</p>
-              <textarea name="desc1"><?php echo $home['desc1'] ?></textarea>
+              <textarea class="primary" name="desc1"><?php echo $home['desc1'] ?></textarea>
               <p>nom deuxieme personne</p>
-              <textarea name="nom2"><?php echo $home['nom2'] ?></textarea>
+              <textarea class="primary" name="nom2"><?php echo $home['nom2'] ?></textarea>
               <p>competence deuxieme personne</p>
-              <textarea name="comp2"><?php echo $home['comp2'] ?></textarea>
+              <textarea class="primary" name="comp2"><?php echo $home['comp2'] ?></textarea>
               <p>description deuxieme personne</p>
-              <textarea name="desc2"><?php echo $home['desc2'] ?></textarea>
+              <textarea class="primary" name="desc2"><?php echo $home['desc2'] ?></textarea>
               <p>partie 2</p>
-              <textarea name="sec2"><?php echo $home['sec2'] ?></textarea>
+              <textarea class="primary" name="sec2"><?php echo $home['sec2'] ?></textarea>
               <p>text partie 2</p>
-              <textarea name="txtsec2"><?php echo $home['txtsec2'] ?></textarea>
+              <textarea class="primary" name="txtsec2"><?php echo $home['txtsec2'] ?></textarea>
               <p>text footer</p>
-              <textarea name="footertxt"><?php echo $home['footertxt'] ?></textarea>
+              <textarea class="primary" name="footertxt"><?php echo $home['footertxt'] ?></textarea>
               <img src="<?php echo $data['logo'] ?>" width="50px">
               <input type="file" name="logo">
               <br>

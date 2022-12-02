@@ -27,7 +27,6 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `carousel` (
-  `carousel_img_id` int(11) NOT NULL,
   `project_id` int(11) NOT NULL,
   `img_url` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -36,10 +35,10 @@ CREATE TABLE `carousel` (
 -- Contenu de la table `carousel`
 --
 
-INSERT INTO `carousel` (`carousel_img_id`, `project_id`, `img_url`) VALUES
-(1, 1, 'img/canalcarousel.jpg'),
-(2, 2, 'img/endgamecarousel.jpg'),
-(3, 3, 'img/mrbeastcarousel.jpg');
+INSERT INTO `carousel` (`project_id`, `img_url`) VALUES
+(1, 'img/canalcarousel.jpg'),
+(2, 'img/endgamecarousel.jpg'),
+(3, 'img/mrbeastcarousel.jpg');
 
 -- --------------------------------------------------------
 
@@ -242,7 +241,7 @@ INSERT INTO `user` (`username`, `email`, `password`, `first_name`, `last_name`, 
 -- Index pour la table `carousel`
 --
 ALTER TABLE `carousel`
-  ADD PRIMARY KEY (`carousel_img_id`);
+  ADD PRIMARY KEY (`project_id`);
 
 --
 -- Index pour la table `images`
