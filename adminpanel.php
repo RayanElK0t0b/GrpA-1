@@ -46,11 +46,11 @@ include("queries/homeElements.php");
           <h2 class="title">User Gestion</h2>
           <div>
             <?php
-              $sql = "SELECT * FROM user"; 
-              $pre = $pdo->prepare($sql); 
+              $sql = "SELECT * FROM user";
+              $pre = $pdo->prepare($sql);
               $pre->execute();
               $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-    
+
               foreach($data as $user){ ?>
             <div class="bloc_user">
               <p><?php echo $user['first_name']." ".$user['last_name']." aka ".$user['username']." admin = ".$user['admin'] ?></p>
@@ -65,7 +65,7 @@ include("queries/homeElements.php");
               </form>
             </div>
             <?php } ?>
-          </div>   
+          </div>
         </div>
       </div>
       <div class="row">
@@ -73,15 +73,15 @@ include("queries/homeElements.php");
           <h2 class="title">Project Gestion</h2>
           <div>
             <?php
-              $sql = "SELECT * FROM projets"; 
-              $pre = $pdo->prepare($sql); 
+              $sql = "SELECT * FROM projets";
+              $pre = $pdo->prepare($sql);
               $pre->execute();
               $projets = $pre->fetchAll(PDO::FETCH_ASSOC);
-    
-              foreach($projets as $proj){  
 
-                $sql = "SELECT * FROM textes WHERE id_projet ='".$projets['id_projet']."'";   
-                $pre = $pdo->prepare($sql); 
+              foreach($projets as $proj){
+
+                $sql = "SELECT * FROM textes WHERE id_projet ='".$projets['id_projet']."'";
+                $pre = $pdo->prepare($sql);
                 $pre->execute();
                 $textes = $pre->fetchAll(PDO::FETCH_ASSOC);?>
 
@@ -126,7 +126,7 @@ include("queries/homeElements.php");
                   </form>
                 </div>
                 <?php } ?>
-          </div> 
+          </div>
         </div>
         </div>
       </div>
@@ -135,13 +135,13 @@ include("queries/homeElements.php");
           <h2 class="title">Main Page Change</h2>
           <div>
             <?php
-            
-            $sql = "SELECT * FROM home";     
-            $pre = $pdo->prepare($sql);     
-            $pre->execute();     
-            $data = $pre->fetch(PDO::FETCH_ASSOC);        
 
-            ?> 
+            $sql = "SELECT * FROM home";
+            $pre = $pdo->prepare($sql);
+            $pre->execute();
+            $data = $pre->fetch(PDO::FETCH_ASSOC);
+
+            ?>
             <form action="action\firstpage.php" method="post" enctype="multipart/form-data">
               <p>Title page</p>
               <textarea name="title"><?php echo $home['title'] ?></textarea>
@@ -171,21 +171,21 @@ include("queries/homeElements.php");
               <textarea name="txtsec2"><?php echo $home['txtsec2'] ?></textarea>
               <p>text footer</p>
               <textarea name="footertxt"><?php echo $home['footertxt'] ?></textarea>
-              <img src="<?php echo $data['logo'] ?>" width="50px">       
+              <img src="<?php echo $data['logo'] ?>" width="50px">
               <input type="file" name="logo">
-              <br>       
-              <img src="<?php echo $data['parallax'] ?>" width="50px">       
+              <br>
+              <img src="<?php echo $data['parallax'] ?>" width="50px">
               <input type="file" name="parallax">
               <br>
-              <img src="<?php echo $data['img1'] ?>" width="50px">       
+              <img src="<?php echo $data['img1'] ?>" width="50px">
               <input type="file" name="img1">
-              <br>       
-              <img src="<?php echo $data['img2'] ?>" width="50px">       
+              <br>
+              <img src="<?php echo $data['img2'] ?>" width="50px">
               <input type="file" name="img2">
-              <br> 
+              <br>
               <input type="submit" name="Valider" value="Valider">
             </form>
-          </div> 
+          </div>
         </div>
       </div>
     </div>

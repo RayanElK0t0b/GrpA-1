@@ -46,11 +46,9 @@ if (!empty($_FILES['img2']['name'])){
 }
 
   $sql = $sql.";";
-  $pre = $pdo->prepare($sql); 
+  $pre = $pdo->prepare($sql);
     $pre->execute($dataBinded);
 
   header('Location:..\adminpanel.php');
   exit();
 ?>
-
-       
