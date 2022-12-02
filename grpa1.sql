@@ -98,23 +98,24 @@ INSERT INTO `home` (`title`, `navbarsec1`, `navbarsec2`, `parallax`, `h1`, `sec1
 CREATE TABLE `images` (
   `id_image` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
-  `img_url` text NOT NULL
+  `img_url` text NOT NULL,
+  `type` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `images`
 --
 
-INSERT INTO `images` (`id_image`, `id_projet`, `img_url`) VALUES
-(1, 1, 'img/canalbanner.jpg'),
-(2, 1, 'img/realisation.jpg'),
-(3, 1, 'img/soundengineering.jfif'),
-(4, 2, 'img/marvelbanner.jpg'),
-(5, 2, 'img/3dmodeling.jfif'),
-(6, 2, 'img/studiolighting.jfif'),
-(7, 3, 'img/chch.jpg'),
-(8, 3, 'img/videoediting.jpg'),
-(9, 3, 'img/graphicdesigning.jfif');
+INSERT INTO `images` (`id_image`, `id_projet`, `img_url`,`type`) VALUES
+(1, 1, 'img/canalbanner.jpg', 1),
+(2, 1, 'img/realisation.jpg', 2),
+(3, 1, 'img/soundengineering.jfif', 3),
+(4, 2, 'img/marvelbanner.jpg', 1),
+(5, 2, 'img/3dmodeling.jfif', 2),
+(6, 2, 'img/studiolighting.jfif', 3),
+(7, 3, 'img/chch.jpg', 1),
+(8, 3, 'img/videoediting.jpg', 2),
+(9, 3, 'img/graphicdesigning.jfif', 3);
 
 -- --------------------------------------------------------
 
@@ -125,26 +126,27 @@ INSERT INTO `images` (`id_image`, `id_projet`, `img_url`) VALUES
 CREATE TABLE `paragraphes` (
   `id_paragraphe` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
-  `paragraphe` text NOT NULL
+  `paragraphe` text NOT NULL,
+  `type` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `paragraphes`
 --
 
-INSERT INTO `paragraphes` (`id_paragraphe`, `id_projet`, `paragraphe`) VALUES
-(1, 1, 'They are the first television company in numbers of sucribers and brand image in France. They offer a diversified service going from sports to series and movies. service going from sports to series and movies.'),
-(2, 1, 'From October 2009 to August 2014 RKGR was working with the realisation and soundengeneering of Canal+ adjusting sound of series and setting up studio for tv shows.'),
-(3, 1, 'The director of realization is responsible for directing a film or television program. He has a creative, management and technical and artistic role. Realizing TV shows was pretty challenging at first, but learning those skills was very rewarding. '),
-(4, 1, 'A sound engineer is responsible for the technical side of a recording or live performance. The sound engineer designs and manages sound levels and outputs, and is responsible for maintaining the physical sound equipment, like amps and microphones. '),
-(5, 2, 'The biggest movie company in the world father of a lot of movies and fan groups From fantasie like Jurrasic Park to real story as Into the Wild. '),
-(6, 2, 'From August 2014 to May 2019 RKGR was working and learning from Marvel employees for adjusting light in the studio and how to create 3D model on After Effect.'),
-(7, 2, 'Based on a brief and/or concept art, 3D modelers digitally build, sculpt, and add detail to 3D characters, props, vehicles, and sets, often referred to as assets. As a base, 3D modelers are often provided with a scan of a prop, character, or vehicle from the live-action shoot, or a third-party site such as MegaScans. The toughest challenge was to produce great physics for the asteroïds gravity'),
-(8, 2, 'Lighting artists use light to enhance the atmosphere, tone, depth and mood of a scene. They input different light effects depending on the factors in a frame or scene, such as the weather or the time of day. They make it clear where the light sources are meant to be in a scene.'),
-(9, 3, 'He is the rising star of Youtube. MrBeast is the first content creator to reach the tremendous numbers he has today in such a short period of time. '),
-(10, 3, 'From May 2019 to August 2022, RKGR was in charge of the Graphic Designing Team to produce logos and assets for MrBeast as well as directing the Editing of his videos.'),
-(11, 3, 'As a film/video editor, you will manage material such as camera footage, dialogue, sound effects, graphics and special effects to produce a final film or video product. This is a key role in the post-production process and your skills can determine the quality and delivery of the finished result. '),
-(12, 3, 'The Graphic Designer job description includes the entire process of defining requirements, visualizing and creating graphics including illustrations, logos, layouts and photos. You will be the one to shape the visual aspects of websites, books, magazines, product packaging, exhibitions and more. ');
+INSERT INTO `paragraphes` (`id_paragraphe`, `id_projet`, `paragraphe`,`type`) VALUES
+(1, 1, 'They are the first television company in numbers of sucribers and brand image in France. They offer a diversified service going from sports to series and movies. service going from sports to series and movies.', 1),
+(2, 1, 'From October 2009 to August 2014 RKGR was working with the realisation and soundengeneering of Canal+ adjusting sound of series and setting up studio for tv shows.', 2),
+(3, 1, 'The director of realization is responsible for directing a film or television program. He has a creative, management and technical and artistic role. Realizing TV shows was pretty challenging at first, but learning those skills was very rewarding. ', 3),
+(4, 1, 'A sound engineer is responsible for the technical side of a recording or live performance. The sound engineer designs and manages sound levels and outputs, and is responsible for maintaining the physical sound equipment, like amps and microphones. ', 4),
+(5, 2, 'The biggest movie company in the world father of a lot of movies and fan groups From fantasie like Jurrasic Park to real story as Into the Wild. ', 1),
+(6, 2, 'From August 2014 to May 2019 RKGR was working and learning from Marvel employees for adjusting light in the studio and how to create 3D model on After Effect.', 2),
+(7, 2, 'Based on a brief and/or concept art, 3D modelers digitally build, sculpt, and add detail to 3D characters, props, vehicles, and sets, often referred to as assets. As a base, 3D modelers are often provided with a scan of a prop, character, or vehicle from the live-action shoot, or a third-party site such as MegaScans. The toughest challenge was to produce great physics for the asteroïds gravity', 3),
+(8, 2, 'Lighting artists use light to enhance the atmosphere, tone, depth and mood of a scene. They input different light effects depending on the factors in a frame or scene, such as the weather or the time of day. They make it clear where the light sources are meant to be in a scene.', 4),
+(9, 3, 'He is the rising star of Youtube. MrBeast is the first content creator to reach the tremendous numbers he has today in such a short period of time. ', 1),
+(10, 3, 'From May 2019 to August 2022, RKGR was in charge of the Graphic Designing Team to produce logos and assets for MrBeast as well as directing the Editing of his videos.', 2),
+(11, 3, 'As a film/video editor, you will manage material such as camera footage, dialogue, sound effects, graphics and special effects to produce a final film or video product. This is a key role in the post-production process and your skills can determine the quality and delivery of the finished result. ', 3),
+(12, 3, 'The Graphic Designer job description includes the entire process of defining requirements, visualizing and creating graphics including illustrations, logos, layouts and photos. You will be the one to shape the visual aspects of websites, books, magazines, product packaging, exhibitions and more. ', 4);
 
 -- --------------------------------------------------------
 
@@ -175,38 +177,39 @@ INSERT INTO `projets` (`id_projet`, `name`) VALUES
 CREATE TABLE `textes` (
   `id_text` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
-  `text` text NOT NULL
+  `text` text NOT NULL,
+  `type` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `textes`
 --
 
-INSERT INTO `textes` (`id_text`, `id_projet`, `text`) VALUES
-(1, 1, 'Canal+'),
-(2, 1, '23,9m suscribers in 2022'),
-(3, 1, '9,6m sucribers in France'),
-(4, 1, '~45 channels'),
-(5, 1, '2873m euro in 2022'),
-(6, 1, 'Part of realisation and sound engeneering'),
-(7, 1, 'Realization Director'),
-(8, 1, 'Leading Sound Engineering'),
-(9, 2, 'Marvel'),
-(10, 2, 'Most Famous Super Hero'),
-(11, 2, 'More than 8000 unique caracters'),
-(12, 2, '29 different series'),
-(13, 2, 'The most known movie companie on earth'),
-(14, 2, 'Help with 3D modeling and studio lighting'),
-(15, 2, '3D Modeling'),
-(16, 2, 'Lighting Experts'),
-(17, 3, 'MrBeast'),
-(18, 3, '106M subscribers on Youtube'),
-(19, 3, '17B views on main Youtube channel'),
-(20, 3, '729 videos in total'),
-(21, 3, '7th world youtuber'),
-(22, 3, 'Head of the Video Editing and the Graphic Designing Departments'),
-(23, 3, 'Video Editing Section'),
-(24, 3, 'Graphic Designing');
+INSERT INTO `textes` (`id_text`, `id_projet`, `text`, `type`) VALUES
+(1, 1, 'Canal+', 1),
+(2, 1, '23,9m suscribers in 2022', 2),
+(3, 1, '9,6m sucribers in France', 3),
+(4, 1, '~45 channels', 4),
+(5, 1, '2873m euro in 2022', 5),
+(6, 1, 'Part of realisation and sound engeneering', 6),
+(7, 1, 'Realization Director', 7),
+(8, 1, 'Leading Sound Engineering', 8),
+(9, 2, 'Marvel', 1),
+(10, 2, 'Most Famous Super Hero', 2),
+(11, 2, 'More than 8000 unique caracters', 3),
+(12, 2, '29 different series', 4),
+(13, 2, 'The most known movie companie on earth', 5),
+(14, 2, 'Help with 3D modeling and studio lighting', 6),
+(15, 2, '3D Modeling', 7),
+(16, 2, 'Lighting Experts', 8),
+(17, 3, 'MrBeast', 1),
+(18, 3, '106M subscribers on Youtube', 2),
+(19, 3, '17B views on main Youtube channel', 3),
+(20, 3, '729 videos in total', 4),
+(21, 3, '7th world youtuber', 5),
+(22, 3, 'Head of the Video Editing and the Graphic Designing Departments', 6),
+(23, 3, 'Video Editing Section', 7),
+(24, 3, 'Graphic Designing', 8);
 
 -- --------------------------------------------------------
 

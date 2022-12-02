@@ -100,7 +100,6 @@ include("queries/homeElements.php");
                 $pre->execute();
                 $carousel = $pre->fetchAll(PDO::FETCH_ASSOC);
                 ?>
-
                 <div class="bloc_projets">
                   <p><?php echo $proj['name']?></p>
                   <form action="action\projectAuto.php" method="post">
@@ -136,10 +135,11 @@ include("queries/homeElements.php");
                     <textarea name="imgComp1" class="primary"><?php echo $images[1]['img_url'] ?></textarea>
                     <p>Image Compétence 2</p>
                     <textarea name="imgComp2" class="primary"><?php echo $images[2]['img_url'] ?></textarea>
+                    <input type="hidden" name="project" value="<?php echo $proj['id_projet']; ?>">
                     <input class="btn secondary" type="submit" name="Valider" value="Valider">
                   </form>
                   <form action="action\delete-project.php" method="post">
-                    <input type="hidden" name="project" value="<?php echo $proj['id_projet'];?>">
+                    <input type="hidden" name="project" value="<?php echo $proj['id_projet']; ?>">
                     <input class="btn secondary" type='submit' name="Delete Project" value="Delete Project">
                   </form>
                 </div>
