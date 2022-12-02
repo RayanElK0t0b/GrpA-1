@@ -133,7 +133,7 @@ include("queries/homeElements.php");
               <div class="modal-content secondary">
                 <h4>Contact Form :</h4>
                 <div class="row">
-                  <form class="col l12 m12 s12" method="post" action="contact.php">
+                  <form class="col l12 m12 s12" method="post" action="action/contact.php">
                     <div class="row">
                       <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">account_circle</i>
